@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Huongnhd'
 SITENAME = u'Huongnhd\'s journey '
-SITEURL = 'https://huongnhdh.github.io/wiki/'
+SITEURL = ''
 
 PATH = 'content'
 
@@ -37,4 +37,5 @@ DEFAULT_PAGINATION = 10
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 # Uncomment following line if you want document-relative URLs when developing
 #RELATIVE_URLS = True
-THEME = "./Flex"
+THEME = "notmyidea"
+# custom for theme
