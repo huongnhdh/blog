@@ -7,7 +7,11 @@ python:
 install:
 - pip install -r requirements.txt
 script:
-- bash deploy.sh
+- rm -rf .git/
+- git init
+- git config user.name "huongnhdh"
+- git config user.email "huong.nhdh@gmail.com"
+- git remote add origin https://${GH_TOKEN}@github.com/huongnhdh/wiki.git
 notifications:
   email:
     on_success: always
