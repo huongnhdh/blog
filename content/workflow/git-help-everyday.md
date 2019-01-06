@@ -1,4 +1,4 @@
-Title: Xử lý Git trước khi push code lên remote
+Title: giteveryday
 Date: 2019-01-06 21:20
 Category: Workflow
 Tags: git
