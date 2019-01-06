@@ -1,12 +1,10 @@
-Title: giteveryday
-Date: 2019-01-06 21:20
+Title: git help everyday
+Date: 2018-12-06 21:20
 Category: Workflow
 Tags: git
 Slug:  git-help-everyday
 Authors: HuongNHD
-Summary:  `giteveryday` - Một bộ lệnh tối thiểu hữu ích cho `Git` (hơn 20 commands với 4 role cơ bản)
-
-# `git help everyday`
+Summary: giteveryday Một bộ lệnh tối thiểu hữu ích cho `Git` (hơn 20 commands với 4 role cơ bản)
 
 ## **NAME(Tên)**
 
