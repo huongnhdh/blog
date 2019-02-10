@@ -4,7 +4,9 @@ Category: Tâm sự
 Tags: diary
 Slug: 2018-chuyen-gio-chua-ke
 Author: HuongNHD
-Summary: 2018 đã qua, đối với mỗi người đều có những trải nghiệm của riêng mình, tôi cũng thế , và tôi viết bài viết này để lưu lại những trải nghiệm của tôi trong năm 2018 cùng với một số lưu ý, cũng như chia sẻ cho những người có duyên ghé qua blog của tôi.
+Summary: 2018 đã qua, đối với mỗi người đều có những trải nghiệm của riêng mình, tôi cũng thế , và tôi viết bài viết này để lưu lại những trải nghiệm của tôi trong năm 2018, cũng như chia sẻ cho những người có duyên ghé qua blog của tôi.
+
+2018 đã qua, đối với mỗi người đều có những trải nghiệm của riêng mình, tôi cũng thế, và tôi viết bài viết này để lưu lại những trải nghiệm của tôi trong năm 2018, cũng như chia sẻ cho những người có duyên ghé qua blog của tôi.
 
 ## Làm việc tại Topica Edtech Group
 
