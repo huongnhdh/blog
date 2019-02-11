@@ -3,10 +3,20 @@
 
 <head>
   <meta charset="utf-8" />
+  <meta name="author" content="{{ AUTHOR }}" />
+  <meta name="robots" content="index, follow"/>
+
+  <meta property="og:title" content="{% block ogtitle %}{{ SITENAME }}{%endblock%}"/>
+  <meta property="og:url" content="{% block ogurl %}{{ SITEURL }}{%endblock%}"/>
+  <meta property="og:site_name" content="{{ SITENAME }}"/>
+  <meta property="og:type" content="{% block ogtype %}website{%endblock%}"/>
+
+  <link rel="canonical" href="{% block canonicalurl %}{{ SITEURL }}{%endblock%}" />
+
   <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
@@ -21,7 +31,7 @@
 </head>
 
 <body id="index" class="home">
-
+  <div class="container">
     {% include 'github.html' %}
     <header id="banner" class="body">
       <h1><a href="{{ SITEURL }}/">{{ SITENAME }} {% if SITESUBTITLE %}<strong>{{ SITESUBTITLE }}</strong>{%
@@ -46,10 +56,9 @@
         </ul>
       </nav>
     </header><!-- /#banner -->
-    <div class="container">
+
     {% block content %}
     {% endblock %}
-  </div>
     <section id="extras" class="body">
       {% if LINKS %}
       <div class="blogroll">
@@ -90,7 +99,7 @@
       <!-- <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing
           Magazine</a>, thanks!</p> -->
     </footer><!-- /#contentinfo -->
-
+  </div>
     {% include 'analytics.html' %}
     {% include 'disqus_script.html' %}
 
