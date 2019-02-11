@@ -23,24 +23,17 @@
       {% include 'article_infos.html' %}
       {{ article.content }}
     </div><!-- /.entry-content -->
-    {% if DISQUS_SITENAME and SITEURL and article.status != "draft" %}
-    <div class="comments">
-      <h2>Comments !</h2>
-      <div id="disqus_thread"></div>
-      <script type="text/javascript">
-        var disqus_shortname = '{{ DISQUS_SITENAME }}';
-        var disqus_identifier = '{{ article.url }}';
-        var disqus_url = '{{ SITEURL }}/{{ article.url }}';
-        (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-      </script>
-      <noscript>Please enable JavaScript to view the comments.</noscript>
+    {% if article.status != "draft" %}
+    <div class="discus">
+      <div class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      <div class="comments">
+        <h2>Comments !</h2>
+        <div id="disqus_thread"></div>
+        <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="100%" data-numposts="5" >  </div>
+        <noscript>Please enable JavaScript to view the comments.</noscript>
+      </div>
     </div>
     {% endif %}
-
   </article>
 </section>
 {% endblock %}
