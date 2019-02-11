@@ -16,6 +16,8 @@ RELATIVE_URLS = False
 
 # FEED_ALL_ATOM = 'feeds/all.atom.xml'
 # CATEGORY_FEED_ATOM = 'feeds/%s.atom.xml'
+FEED_ALL_ATOM = None
+CATEGORY_FEED_ATOM = None
 
 DELETE_OUTPUT_DIRECTORY = False
 
@@ -23,6 +25,7 @@ DELETE_OUTPUT_DIRECTORY = False
 
 #DISQUS_SITENAME = ""
 GOOGLE_ANALYTICS = "UA-131511951-1"
+
 STATIC_PATHS = ['extra/favicon.ico']
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
