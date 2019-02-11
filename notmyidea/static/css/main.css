@@ -13,7 +13,7 @@
 @import url("pygment.css");
 @import url("typogrify.css");
 @import url("fonts.css");
-
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 /***** Global *****/
 /* Body */
 body {
@@ -105,6 +105,8 @@ dt {font-weight: bold;}
 dd {margin-left: 1.5em;}
 
 pre{background-color:  rgb(238, 238, 238); padding: 10px; margin: 10px; overflow: auto;}
+/* code one line */
+code{color:#e74c3c; font-size: 1em; font-family: 'Source Code Pro', monospace; background-color: #ffffff; }
 
 /* Quotes */
 blockquote {

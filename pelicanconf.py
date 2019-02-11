@@ -39,3 +39,8 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 #RELATIVE_URLS = True
 THEME = "./notmyidea"
 # custom for theme
+
+STATIC_PATHS = ['extra/favicon.ico']
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': 'favicon.ico'}
+}
