@@ -85,7 +85,8 @@ Có nhiều cách để thực hiện:
  3. Using Lucene syntax or ElasticSearch Simple Query strings directly: q=price:<200 q=-status:past
 
 Nhìn bảng so sánh dưới đây để có thêm thông tin:
-|   | Điểm manh  |Hạn chế   |
+
+|   | Điểm mạnh  |Hạn chế   |
 |---|---|---|
 |`LSH Brackets with an operator` | - Người sử dụng (front-end dev) dễ  dàng sử dụng <br> - Tương đối đơn giản để parse ở phía server-side  <br> - Trông khá trực quan| - Không thể  thực hiện OR cho combined filters  |
 |`RHS colon with an operator` | - Dễ dàng parser tại server side <br> - Người sử dụng (front-end dev) dễ  dàng sử dụng | - Không thể  thực hiện OR cho combined filters - Ít trực quan hơn `LSH Brackets with an operator`  |
