@@ -95,3 +95,8 @@ Nhìn bảng so sánh dưới đây để có thêm thông tin:
 Nếu bạn cần một giải pháp filter linh hoạt nhất có thể dành cho front-end của bạn, cho phép nó query trực tiếp vào DB thông qua API, thì sử dụng trực tiếp `Lucene or ElasticSearch syntax` sẽ hợp lý hơn ngay cả khi nó đòi hỏi người sử dụng phải học để dùng nó.
 
 Tuy nhiên, trong hầu hết các trường hợp phổ biến, thì việc sử dụng `LSH Brackets with an operator` là giải pháp được recomend nhất nếu API của bạn có dùng filter nâng cao
+
+Ref: <br>
+https://www.gvj-web.com/blog/paging-sorting-filtering-restful-api <br>
+https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination
+
