@@ -40,7 +40,7 @@ PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 THEME = "./notmyidea"
 # custom for theme
 
-STATIC_PATHS = ['extra/favicon.ico']
+STATIC_PATHS = ['extra', 'images']
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }

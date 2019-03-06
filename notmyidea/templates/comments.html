@@ -1,1 +1,8 @@
-{% if DISQUS_SITENAME %}<p>There are <a href="{{ SITEURL }}/{{ article.url }}#disqus_thread">comments</a>.</p>{% endif %}
+<div class="discus">
+    <div class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+    <div class="comments">
+      <h2>Comments !</h2>
+      <div id="disqus_thread"></div>
+      <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="100%" data-numposts="5" >  </div>
+    </div>
+  </div>
