@@ -36,7 +36,7 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+RELATIVE_URLS = True
 THEME = "./notmyidea"
 # custom for theme
 
