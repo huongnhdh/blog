@@ -16,19 +16,22 @@ Nếu lướt web bằng các loại browser phổ biển như Chrome, Firefox, 
 
 Nhiều Cookies là vô hại, trong khi có những cookies vẫn hoạt động trên những website không sinh nó, dùng để thu thập các thông tin về hành vi cũng như từng cú click của bạn. Ở đây tôi muốn nó đến các `third-party persistent cookies` hay với một cách dễ hiểu hơn thì nó là `tracking cookies`.
 
-**Tracing cookies** can thiệp sâu vào sự riêng tư của người duyệt web nhiều đến nỗi nhiều chương trình diệt virus liệt chúng vào spyware (nghĩa là phần mềm gián điệp). Mặc dù nó mang tiếng xấu là thế  nhưng chúng lại phổ biến đến nỗi mà chúng ta không thể nào tránh khỏi chúng. Trong bài viết này chúng ta sẽ đi tìm hiểu chi tiết và giải thích cách các tracing cookies theo dõi `web activity` của chúng ta như thế nào, tại sao chúng lại phổ biến đế thế và làm thế nào để ngừng chúng lại
+**Tracking cookies** can thiệp sâu vào sự riêng tư của người duyệt web nhiều đến nỗi nhiều chương trình diệt virus liệt chúng vào spyware (nghĩa là phần mềm gián điệp). Mặc dù nó mang tiếng xấu là thế  nhưng chúng lại phổ biến đến nỗi mà chúng ta không thể nào tránh khỏi chúng. Trong bài viết này chúng ta sẽ đi tìm hiểu chi tiết và giải thích cách các tracking cookies theo dõi `web activity` của chúng ta như thế nào, tại sao chúng lại phổ biến đế thế và làm thế nào để ngừng chúng lại
 
 
-## Types of cookies explained - Một số thể loại cookies
+## Types of cookies explained - Một số thể  loại cookies
 
-Đầu tiên, cần lướt qua các loại cookies chính là session cookies và persistent cookies. Có bao giờ bạn đi đến browser setting và xóa mọi cookies thì đó cũng chính là việc bạn đang xóa các persistent cookies 
+Đầu tiên, cần lướt qua các loại cookies chính là session cookies và persistent cookies. Có bao giờ bạn đi đến browser setting và xóa mọi cookies thì đó cũng chính là việc bạn đang xóa các persistent cookies.
 
 ### 1. Session cookies
-Loại cookies cơ bản nhất là session cookie. Session cookie  chỉ tồn tại trong bộ nhớ tạm (temporary memory) và sẽ được xóa ngay khi bạn đóng trình duyệt. Bấy kỳ cookies nào được tạo ra mà không có hạn sử dụng (expiration date) thì tự động hiểu đó là session cookie. Một trong những cách sử dụng phổ biến của `session cookie` là để ghi nhớ giỏ hàng trên một site thương mại điện tử  (Mặc dù ngày nay đa số họ sẽ lưu trên database hay server )
+Loại cookies cơ bản nhất là session cookie. Session cookie chỉ tồn tại trong bộ nhớ tạm (temporary memory) và sẽ được xóa ngay khi bạn đóng trình duyệt. Bất kỳ cookies nào được tạo ra mà không có hạn sử dụng (expiration date) thì tự động hiểu đó là session cookie. Một trong những cách sử dụng phổ biến của `session cookie` là để ghi nhớ giỏ hàng trên một site thương mại điện tử  (Mặc dù ngày nay đa số họ sẽ lưu trên database hay server )
+
 ### 2. First-party persistent cookies
 `Persisten cookies` được viết trên bộ nhớ thiết bị (memory device) cũng với một hạn sử dụng. và nó chỉ được sử dụng bởi website tạo ra nó  và it can `last however long the website dictates`. Nó được để lại trên device ngay cả khi đã đóng trình duyệt. Trình duyệt sẽ sử dụng `first-party persistent cookie` để có nhiều cải tiến về  chất lượng phục vụ, như việc nhớ bạn đã đăng nhập và không cần đăng nhập lại mỗi khi quay trở lại một trang web. 
+
 ### 3. Third-party persistent cookies
 `Third party persistent cookies`, như đã biết về  `tracking cookie` cũng là ý chính trong bài viết này. Cũng giống như `first-party persistent cookie` những cookies này được lưu trong bộ nhớ của thiết bị và có một hạn sử dụng. Không giống như sự đa dạng của `first-party persistent cookie`, tuy nhiện những cookies này được phép truy cập trên những web site không tạo ra chúng. Điều này cho phép người tạo ra cookie này có thể thu thập và nhận về bất kì dữ liệu nào về  thời gian cũng như resource của chúng khi truy cập 1 page.
+
 ## Where do tracking cookies come from? - Tracking cookie đến từ đâu?
 Những website ngày nay thì hiếm khi chỉ tạo ra được từ mã code và nội dung từ chủ trang web hay người quản trị, thay vào đó họ sử  dụng các resource có sẵn để  xây dựng và thêm các chức năng cần thiết để  hoạt động. Những resource này rất hữu ích đôi khi là cần thiết cho sự cạnh tranh. Nhưng thật không may, chính những resource này lại thường là những thủ phạm chính cho việc online tracking. Một số resource phổ biến và có sử dụng `tracking cookie` là: 
 - Advertisements - dịch vụ quảng caó
@@ -41,7 +44,7 @@ Chẳng hạn như khi viết bài post này và tôi đã sử dụng hình ả
 
 Tương tự, hầu như mọi ads và wigets không được host bởi trang web mà nó đang hiển thị. Nó chỉ sử dụng resource được kéo về  từ bên thứ 3 và rồi ... tất cả chúng đều sử dụng cookies.
 
-Theo một báo các của [the Guardian năm 2012](https://www.theguardian.com/technology/2012/apr/23/cookies-and-web-tracking-intro), một số công ty lớn sử dụng tracing cookie bao gồm :
+Theo một báo các của [the Guardian năm 2012](https://www.theguardian.com/technology/2012/apr/23/cookies-and-web-tracking-intro), một số công ty lớn sử dụng trackingcookie bao gồm :
 
 - AddThis
 - Adnxs
