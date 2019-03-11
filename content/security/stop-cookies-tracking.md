@@ -75,7 +75,11 @@ Nếu kiểm tra cookie file tại một trang web bất kỳ bằng [EditThisCo
 
 - Name được sử dụng bởi website và ads để nhận dạng cookie và mục đích sử dụng của nó.
 - The value là thành phần chưa unique ads ID lưu trữ nhờ đó tracker creator có thể nhận diện bạn khi bạn truy cập vào những website khác. Nó thường là một chuỗi số và ký tự được sinh ra ngẫu nhiên, hoặc không là một chuỗi mã hóa các thông tin nêu trên
-- The attribute chứa thông tin về đặc tính của cookie như: HSD của cookie, nếu cookie không được set HSD thì cookie đó sẽ bị hủy khi browser đóng 
+- The attribute chứa thông tin về đặc tính của cookie như: HSD của cookie, nếu cookie không được set HSD thì cookie đó sẽ bị hủy khi browser đóng. Tracking cookies bắt buộc phải có hạn sử dụng.
+- Nếu cookies có thể  được sử  dụng từ domain khác
+- Liệu rằng cookies có thể  được gửi đi trong insecure connection hay không. Đơn giản là kiểm tra nó với HTTPs
+- Liệu rằng cookies có thể  bị truy cập bằng JavasScript hay không. Tắt nó đi để ngăn cản các XSS attack mà có thể sử dụng đánh cắp thông tin đăng nhập sửa đổi cookies cho mục đích bất chính. 
+
 --- tobe continue ....
 ## How to stop tracking cookies
 ## Do not track
