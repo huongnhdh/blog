@@ -1,0 +1,24 @@
+<section class="banner-section">
+  <div class='msg'>
+    <h1><a href="{{SITE_URL}}">{{ SITENAME }}</a></h1>
+    <p>{{ SITESUBTITLE }}</p>
+  </div>
+  <p class="banner">{{BANNERTITLE}}</p>
+</section>
+<header id="banner" class="body">
+    <ul id="ul-nav-top">
+      {% for title, link in MENUITEMS %}
+      <li><a href="{{ link }}">{{ title }}</a></li>
+      {% endfor %}
+    </ul>
+  <nav>
+    <ul>
+      {% if DISPLAY_CATEGORIES_ON_MENU -%}
+      {% for cat, null in categories %}
+      <li {% if cat==category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{
+          cat }}</a></li>
+      {% endfor %}
+      {% endif %}
+    </ul>
+  </nav>
+</header><!-- /#banner -->

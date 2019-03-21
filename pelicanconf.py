@@ -4,8 +4,9 @@ from __future__ import unicode_literals
 
 AUTHOR = u'Huongnhd'
 SITENAME = u'Huongnhd\'s journey '
+SITESUBTITLE='Go Slow…To Go Fast!'
+BANNERTITLE='Greatness Awaits'
 SITEURL = ''
-
 PATH = 'content'
 
 TIMEZONE = 'Asia/Ho_Chi_Minh'
@@ -13,8 +14,8 @@ TIMEZONE = 'Asia/Ho_Chi_Minh'
 DEFAULT_LANG = u'en'
 
 # Feed generation is usually not desired when developing
-FEED_ALL_ATOM = None
-CATEGORY_FEED_ATOM = None
+FEED_ALL_RSS = 'feeds/all.rss.xml'
+CATEGORY_FEED_RSS = 'feeds/{slug}.rss.xml'
 TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
@@ -44,3 +45,11 @@ STATIC_PATHS = ['extra', 'images']
 EXTRA_PATH_METADATA = {
     'extra/favicon.ico': {'path': 'favicon.ico'}
 }
+
+MENUITEMS = (
+    ('Archives', '/archives.html'),
+    ('Tags', '/tags.html'),
+    ('Authors', '/authors.html'),
+)
+
+GITHUB_URL = 'https://github.com/huongnhdh/'
