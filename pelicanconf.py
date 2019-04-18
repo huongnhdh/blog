@@ -43,7 +43,7 @@ THEME = "./notmyidea"
 
 STATIC_PATHS = ['extra', 'images']
 EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}
+    'extra/favicon.ico': {'path': SITEURL + 'favicon.ico'}
 }
 
 MENUITEMS = (
