@@ -25,8 +25,8 @@ DELETE_OUTPUT_DIRECTORY = False
 
 #DISQUS_SITENAME = ""
 GOOGLE_ANALYTICS = "UA-131511951-1"
-
-STATIC_PATHS = ['extra/favicon.ico']
-EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': 'favicon.ico'}
-}
+STATIC_PATHS = ['extra', 'images']
+# STATIC_PATHS = ['extra/favicon.ico']
+# EXTRA_PATH_METADATA = {
+#     'extra/favicon.ico': {'path': 'favicon.ico'}
+# }

@@ -41,7 +41,7 @@ RELATIVE_URLS = False
 THEME = "./notmyidea"
 # custom for theme
 
-# STATIC_PATHS = ['extra', 'images']
+STATIC_PATHS = ['extra', 'images']
 
 # EXTRA_PATH_METADATA = {
 #     'extra/favicon.ico': {'path': SITEURL + 'favicon.ico'}
