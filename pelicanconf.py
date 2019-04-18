@@ -6,7 +6,7 @@ AUTHOR = u'Huongnhd'
 SITENAME = u'Huongnhd\'s journey '
 SITESUBTITLE='Go Slow…To Go Fast!'
 BANNERTITLE='Greatness Awaits'
-SITEURL = ''
+SITEURL = 'http://local.blog:8080/'
 PATH = 'content'
 
 TIMEZONE = 'Asia/Ho_Chi_Minh'
@@ -37,14 +37,15 @@ SOCIAL = (
 DEFAULT_PAGINATION = 10
 PYGMENTS_RST_OPTIONS = {'linenos': 'table'}
 # Uncomment following line if you want document-relative URLs when developing
-RELATIVE_URLS = True
+RELATIVE_URLS = False
 THEME = "./notmyidea"
 # custom for theme
 
-STATIC_PATHS = ['extra', 'images']
-EXTRA_PATH_METADATA = {
-    'extra/favicon.ico': {'path': SITEURL + 'favicon.ico'}
-}
+# STATIC_PATHS = ['extra', 'images']
+
+# EXTRA_PATH_METADATA = {
+#     'extra/favicon.ico': {'path': SITEURL + 'favicon.ico'}
+# }
 
 MENUITEMS = (
     ('Archives', '/archives.html'),
@@ -53,3 +54,5 @@ MENUITEMS = (
 )
 
 GITHUB_URL = 'https://github.com/huongnhdh/'
+
+IMAGES_PATH = '{}/images/'.format(SITEURL)

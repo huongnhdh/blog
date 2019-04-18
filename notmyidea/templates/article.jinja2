@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block html_lang %}{{ article.lang }}{% endblock %}
+{% block title %}{{ article.title|striptags }}{% endblock %}
+
+{% block extra_head %}
+{% import 'translations.html' as translations with context %}
+{% if translations.entry_hreflang(article) %}
+  {{ translations.entry_hreflang(article) }}
+{% endif %}
+{% endblock %}
+
+{% block content %}
+  <section id="content" class="body">
+    <article>
+      <header>
+        <h1 class="entry-title">
+          <a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark"
+            title="Permalink to {{ article.title|striptags }}">{{ article.title }}</a></h1>
+        {% include 'twitter.html' %}
+      </header>
+
+      <div class="entry-content">
+        {% include 'article_infos.html' %}
+        {{ article.content }}
+      </div><!-- /.entry-content -->
+      {% if article.status != "draft" %}
+      <div class="discus">
+        <div class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+        <div class="comments">
+          <h2>Comments !</h2>
+          <div id="disqus_thread"></div>
+          <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="100%" data-numposts="5" >  </div>
+          <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+      </div>
+      {% endif %}
+    </article>
+  </section>
+{% endblock %}
