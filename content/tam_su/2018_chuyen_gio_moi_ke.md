@@ -1,6 +1,6 @@
 Title: 2018 chuyện giờ mới kể
 Date: 2019-02-06 00:00
-Category: Tâm sự
+Category: Tản mạn
 Tags: diary
 Slug: 2018-chuyen-gio-chua-ke
 Author: HuongNHD
