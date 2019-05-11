@@ -11,7 +11,7 @@
   <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
   <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
   <meta property="og:description" content="{{ article.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
-  <meta property="og:image" content="{{ SITEURL }}/images/{% if article.opengraph_image is defined %}{{ article.opengraph_image }}{% else %}opengraph-default.jpg{% endif %}" />
+  <meta property="og:image" content="{% if article.image is defined %}{{ article.image }} {% else %} {{ SITEURL }}/images/opengraph-default.jpg {% endif %}" />
   {% elif page is defined %}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
@@ -30,7 +30,7 @@
 
   <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
   {% if FEED_ALL_ATOM %}
@@ -41,6 +41,23 @@
   <link href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
     type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
   {% endif %}
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ SITEURL }}/extra/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="{{ SITEURL }}/extra/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ SITEURL }}/extra/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="{{ SITEURL }}/extra/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ SITEURL }}/extra/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="{{ SITEURL }}/extra/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="{{ SITEURL }}/extra/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="{{ SITEURL }}/extra/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="{{ SITEURL }}/extra/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="{{ SITEURL }}/extra/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ SITEURL }}/extra/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="{{ SITEURL }}/extra/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="{{ SITEURL }}/extra/favicon-16x16.png">
+  <link rel="manifest" href="{{ SITEURL }}/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
   {% block extra_head %}{% endblock extra_head %}
 </head>
 
@@ -65,10 +82,10 @@
       <div class="social">
         <h2>{{ SOCIAL_WIDGET_NAME | default('social') }}</h2>
         <ul>
-          {% if FEED_ALL_ATOM %}
+          {# {% if FEED_ALL_ATOM %}
           <li><a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_ATOM_URL %}{{ FEED_ALL_ATOM_URL }}{% else %}{{ FEED_ALL_ATOM }}{% endif %}"
               type="application/atom+xml" rel="alternate">atom feed</a></li>
-          {% endif %}
+          {% endif %} #}
           {% if FEED_ALL_RSS %}
           <li><a href="{{ FEED_DOMAIN }}/{% if FEED_ALL_RSS_URL %}{{ FEED_ALL_RSS_URL }}{% else %}{{ FEED_ALL_RSS }}{% endif %}"
               type="application/rss+xml" rel="alternate">rss feed</a></li>
@@ -85,9 +102,9 @@
     <footer id="contentinfo" class="body">
       <address id="about" class="vcard body">
         Copyright © 2018 by <a href="https://github.com/huongnhdh">HuongNHD</a>.
+        <p>The site was generate by <a href="https://github.com/getpelican/pelican">Pelican</a> with theme <a href="#"> notmyidea</a> modified, thanks!</p>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
       </address><!-- /#about -->
-
-      <p>The site was generate by <a href="https://github.com/getpelican/pelican">Pelican</a> with theme <a href="#"> notmyidea</a> modified, thanks!</p>
     </footer><!-- /#contentinfo -->
   </div>
     {% include 'analytics.html' %}

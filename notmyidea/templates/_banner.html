@@ -1,23 +1,24 @@
 <section class="banner-section">
   <div class='msg'>
-    <h1><a href="{{SITE_URL}}">{{ SITENAME }}</a></h1>
+    <h1><a href="{{SITEURL}}">{{ SITENAME }}</a></h1>
     <p>{{ SITESUBTITLE }}</p>
   </div>
   <p class="banner">{{BANNERTITLE}}</p>
 </section>
 <header id="banner" class="body">
     <ul id="ul-nav-top">
+      <li><a href="/" class="{% if page_name == 'index' %}active{% endif %}">Home</a></li>
       {% for title, link in MENUITEMS %}
-      <li><a href="{{ SITEURL }}/{{ link }}">{{ title }}</a></li>
+      <li><a href="{{ SITEURL }}{{ link }}" class="{% if page_name == title.lower() %}active{% endif %}">{{ title }}</a></li>
       {% endfor %}
     </ul>
   <nav>
-    <ul>
+    <ul class="columns">
       {% if DISPLAY_CATEGORIES_ON_MENU -%}
-      {% for cat, null in categories %}
-      <li {% if cat==category %} class="active" {% endif %}><a href="{{ SITEURL }}/{{ cat.url }}">{{
-          cat }}</a></li>
-      {% endfor %}
+        {% for cat, null in categories %}
+        <li class="column {% if cat==category %} active {% endif %} " ><a href="{{ SITEURL }}/{{ cat.url }}">{{
+            cat }}</a></li>
+        {% endfor %}
       {% endif %}
     </ul>
   </nav>

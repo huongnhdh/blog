@@ -1,6 +1,6 @@
 <footer class="post-info">
         <abbr class="published" title="{{ article.date.isoformat() }}">
-                Published: {{ article.locale_date }}
+                <i class="far fa-calendar-alt"></i> {{ article.locale_date }}
         </abbr>
         {% if article.modified %}
 		<br />
@@ -17,7 +17,7 @@
         </address>
         {% endif %}
 <p>In <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>.</p>
-{% include 'taglist.html' %}
-{% import 'translations.html' as translations with context %}
-{{ translations.translations_for(article) }}
-</footer><!-- /.post-info -->
+{% include 'taglist.html' %} 
+<!-- {% import 'translations.html' as translations with context %} -->
+<!-- {{ translations.translations_for(article) }} -->
+</footer><!-- /.particle_infos.htmlost-info -->

@@ -6,7 +6,7 @@ AUTHOR = u'Huongnhd'
 SITENAME = u'Huongnhd\'s journey '
 SITESUBTITLE='Go Slow…To Go Fast!'
 BANNERTITLE='Greatness Awaits'
-SITEURL = 'http://local.blog:8080/'
+SITEURL = ''
 PATH = 'content'
 
 TIMEZONE = 'Asia/Ho_Chi_Minh'
@@ -43,9 +43,9 @@ THEME = "./notmyidea"
 
 STATIC_PATHS = ['extra', 'images']
 
-# EXTRA_PATH_METADATA = {
-#     'extra/favicon.ico': {'path': SITEURL + 'favicon.ico'}
-# }
+EXTRA_PATH_METADATA = {
+    'extra/favicon.ico': {'path': SITEURL + 'favicon.ico'}
+}
 
 MENUITEMS = (
     ('Archives', '/archives.html'),
