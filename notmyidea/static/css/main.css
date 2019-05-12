@@ -467,11 +467,16 @@ blockquote p {
 }
 
 .article-image {
-	width: 100%;
+	margin-top: 2%;
+	margin-bottom: 5%;
+	max-width: 100%;
+	
 }
 .article-image-thumbnail {
-	width: 100%;
+	max-width: 100%;
 	max-height: 300px;
+	margin-top: 2%;
+	margin-bottom: 5%;
 }
 
 .article-info {
@@ -488,11 +493,13 @@ article .entry-content {
 }
 
 article.card-cover {
-	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	/* box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
   transition: 0.3s;
-	margin-bottom: 2%;
-	padding: 5%;
+	margin: 5% 0 5% 0;
+	padding: 5% 5% 10% 5%;
+	border-block-end: thin solid #C74451;
 }
 article.card-cover:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+	/* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
+
 }

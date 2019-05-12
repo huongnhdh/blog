@@ -3,8 +3,7 @@ Date: 2019-03-06 10:20
 Category: Security
 Tags: privacy, security
 Slug: stop-cookies-tracking
-image: cookies.svg
-opengraph_image: cookies.svg
+image: https://s3-ap-northeast-1.amazonaws.com/huongnhdh.blog/cookie-300x300.png
 Authors: HuongNHD
 Summary: How cookies track you around the web and how to stop them
 # How cookies track you around the web and how to stop them
@@ -13,7 +12,6 @@ Ref: https://privacy.net/stop-cookies-tracking
 Translated by: HuongNHD
 ---
 
-![cookies](../images/cookies.svg){:height="80vw" min-height="300px"}
 Nếu lướt web bằng các loại browser phổ biển như Chrome, Firefox, Internet Explorer, Edge, hoặc Safari, thì chắc là trong túi cookies của chúng ta đã có khá nhiều bánh cookies rồi. Cookies được sử dụng để ghi lại những thông tin cơ bản của website mà chúng ta lướt qua (ví dụ: thông tin login, thông tin giỏ hàng, ngôn ngữ trên giao diện web, ...). Nó được tạo ra bởi website và tồn tại bên phía browser cho đến khi nó expire (hết hạn đó) .
 
 Nhiều Cookies là vô hại, trong khi có những cookies vẫn hoạt động trên những website không sinh nó, dùng để thu thập các thông tin về hành vi cũng như từng cú click của bạn. Ở đây tôi muốn nó đến các `third-party persistent cookies` hay với một cách dễ hiểu hơn thì nó là `tracking cookies`.

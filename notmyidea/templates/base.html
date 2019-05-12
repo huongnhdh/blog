@@ -11,19 +11,19 @@
   <meta property="og:url" content="{{ SITEURL }}/{{ article.url }}" />
   <meta property="og:title" content="{{ article.title | replace("\"", "&quot;") }}" />
   <meta property="og:description" content="{{ article.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
-  <meta property="og:image" content="{% if article.image is defined %}{{ article.image }} {% else %} {{ SITEURL }}/images/opengraph-default.jpg {% endif %}" />
+  <meta property="og:image" content="{% if article.image is defined %}{{ article.image }} {% else %} {{ SITEURL }}/images/opengraph-default.png {% endif %}" />
   {% elif page is defined %}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ SITEURL }}/{{ page.url }}" />
   <meta property="og:title" content="{{ SITENAME }} - {{ page.title | replace("\"", "&quot;") }}" />
   <meta property="og:description" content="{{ page.content | striptags | replace("\"", "&quot;") | truncate(196, False, '...') }}" />
-  <meta property="og:image" content="{{ SITEURL }}/images/{% if page.opengraph_image is defined %}{{ page.opengraph_image }}{% else %}opengraph-default.jpg{% endif %}" />
+  <meta property="og:image" content="{{ SITEURL }}/images/{% if page.opengraph_image is defined %}{{ page.opengraph_image }}{% else %}opengraph-default.png{% endif %}" />
   {% else %}
   <meta property="og:type" content="website" />
   <meta property="og:url" content="{{ SITEURL }}/{{ output_file }}" />
   <meta property="og:title" content="{{ SITENAME }}" />
   <meta property="og:description" content="huongnhdh blog" />
-  <meta property="og:image" content="{{ SITEURL }}/images/opengraph-default.jpg" />
+  <meta property="og:image" content="{{ SITEURL }}/images/opengraph-default.png" />
   {% endif %}
 
   <link rel="canonical" href="{% block canonicalurl %}{{ SITEURL }}{%endblock%}" />

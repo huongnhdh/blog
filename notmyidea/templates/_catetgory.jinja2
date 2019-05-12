@@ -7,6 +7,8 @@
 {# First item #}
 {% if loop.first and not articles_page.has_previous() %}
 <aside id="featured" class="body">
+  <h1>Latest article!</h1>
+  <hr />
     {% with article=article %}
       {% include "_article.jinja2" %}
     {% endwith %}
