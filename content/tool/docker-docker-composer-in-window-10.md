@@ -10,15 +10,14 @@ language: vi
 Summary: Dùng Doker trên Window 10 cơ bản, cách cài đặt, lỗi hay gặp, command hay dùng
 
 
-# Dùng Docker in Window 10 cơ bản
-
 Đây là hướng dẫn cho việc cài đặt Docker desktop phục vụ cho việc development trên Window, post này mình cài đặt cho Docker version 18.09.2. (Version cũ thì cách cài đặt cũng sẽ khác)
 
 ## Hướng dẫn cài đặt
 1. Yêu cầu hệ thống chạy Docker trên Window
 
-    - CPU: CPU cần phải hỗ trợ virtualization, và phải 64 bit
-    - OS
+    CPU: CPU cần phải hỗ trợ virtualization, và phải 64 bit.
+
+    OS:
     - Window 10 Professtional 64 bit 
     - Window 10 Enterprise 64 bit
     - Windown 10 Education (1607 Anniversary Update, Build 14393 or later)
@@ -39,21 +38,22 @@ Summary: Dùng Doker trên Window 10 cơ bản, cách cài đặt, lỗi hay g�
 3. Sau khi cài đặt xong "Docker for Windows Installer". 
 
     Mở ứng dụng docker và xác nhận lại Docker đã hoạt động chưa.
+
     - Đầu tiên nếu OS chưa active Hyper-V, thì sẽ tự động restart lại Window
     - Tiếp theo là login vào tài khoản DockerHub
-    - Mở cmd test lại bằng câu lệnh `docker run hello-world`
+    - Mở cmd test lại bằng câu lệnh
 
-    Nếu gặp lỗi 
-    ```
-    Error response from daemon: Get https://registry-1.docker.io/v2/: 540 net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
-    ```
-    Chỉ cần `docker login` rồi restart lại Window là ok 
-    - Tiếp theo kiểm tra docker-compose (Quản lý docker containers khi một ứng dụng cần nhiều docker. vd một ứng dụng blog cần 1 container run nginx, 1 container apache, 1 container mySQL chẳng hạn) : 
+    ```sh  
+    docker run hello-world
+    # Nếu gặp lỗi    `Error response from daemon: Get https://registry-1.docker.io/v2/: 540 net/http: request canceled while waiting for         connection (Client.Timeout exceeded while awaiting headers)`
+    # Chỉ cần `docker login` rồi restart lại Window là ok
+
+    docker-compose --vesion
+    # Tiếp theo kiểm tra docker-compose (Quản lý docker containers khi một ứng dụng cần nhiều docker. vd một ứng dụng blog cần 1 container run nginx, 1 container apache, 1 container mySQL chẳng hạn)
     
-    `docker-compose --vesion`
-    - Tiếp theo kiểm tra (trình quản lý tập trung cho các container ):
-
-    `docker-machine --version`
+    docker-machine --version
+    # trình quản lý tập trung cho các container
+    ```
 
 ## Cách dùng
 Vì là trên Window nên việc dùng `bash shell` hơi bất tiện nên mình dùng luôn `docker-cli`
