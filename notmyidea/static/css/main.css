@@ -499,7 +499,3 @@ article.card-cover {
 	padding: 5% 5% 10% 5%;
 	border-block-end: thin solid #C74451;
 }
-article.card-cover:hover {
-	/* box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2); */
-
-}

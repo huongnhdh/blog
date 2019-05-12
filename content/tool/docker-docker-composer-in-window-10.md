@@ -1,4 +1,4 @@
-Title: Hướng dẫn cài đặt Docker and Docker composer in window 10
+Title: Dùng Docker trên window 10
 Date: 2019-05-11 14:49
 Category: Tools
 Tags: docker,install-guide
@@ -7,19 +7,84 @@ Authors: HuongNHD
 image: https://s3-ap-northeast-1.amazonaws.com/huongnhdh.blog/docker-windows.png
 credit_image: internet
 language: vi
-Summary: Dùng doker trên windown 10 khá lằng nhằng hơn trên Linux hay MacOS ....
+Summary: Dùng Doker trên windown 10 cơ bản, cách cài đặt, lỗi hay gặp, command hay dùng
 
 
-# Docker và Docker composer in window 10
-Trước khi cài đặt docker lên máy windown ta cần phải biết 1 số thứ.
-- 
-# Hướng dẫn cài đặt
+# Dùng Docker in window 10 cơ bản
 
-# Cách dùng
+Đây là hướng dẫn cho việc cài đặt docker desktop phục vụ cho việc develeopment trên window, và post này mình cài đặt cho Docker version 18.09.2. (version cũ thì  cách cài đạt cũng sẽ khác)
 
-# Tool for monitor
+## Hướng dẫn cài đặt
+1. Yêu cầu hệ thống chạy Docker trên Window
 
-# Một số lỗi thường gặp
+    - CPU: CPU cần phải hỗ trợ virtualization, và phải 64 bit
+    - OS
+        - Window 10 Professtional 64 bit 
+        - Window 10 Enterprise 64 bit
+        - Windown 10 Education (1607 Anniversary Update, Build 14393 or later)
 
-# Link tham khảo
-- https://docs.docker.com/docker-for-windows/install/
+        Thông tin này được trên thông báo trên trang [hướng dẫn cài đặt của Docker](https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install)
+
+2. Download Docker CE (comunity edition)
+
+   Docker có 2 phiên bản là [Docker CE (Community Edition) sẽ khác với Docker EE (Enterprise Edition)](https://docs.docker.com/install/overview/)
+    - CE thì dùng cho developer các nhân hoặc các nhóm nhỏ để tìm hiểu và build môi trường development
+    - EE là phiên bản dành cho doanh nghiệp, có các tính năng đặc biệt 1 trong số đó là hỗ trọ scale ứng dụng.   
+
+   Download Docker CE cho window trên docker hub tại đây [link download](https://hub.docker.com/editions/community/docker-ce-desktop-windows) (Để download được thì cần đăng nhập vào docker hub)
+
+3. Sau khi cài đặt xong "Docker for Windows Installer". 
+
+    Mở ứng dụng docker.
+    - Đầu tiên nếu OS chưa active Hyper-V, thì sẽ tự động restart lại Window
+    - Tiếp theo là login vào tài khoản DockerHub
+    - Mở cmd test lại bằng câu lệnh `docker run hello-world`
+
+        Nếu gặp lỗi 
+        ```
+        Error response from daemon: Get https://registry-1.docker.io/v2/: 540 net/http: request canceled while waiting for connection (Client.Timeout exceeded while awaiting headers)
+        ```
+        chỉ cần  `docker login` rồi restart lại window là ok 
+    - Tiếp theo kiểm tra docker-compose (Quản lý docker containers  khi một ứng dụng cần nhiều docker. vd một ứng dụng blog cần 1 container run nginx, 1 container apache, 1 container mySQL chẳng hạn) : 
+        
+        `docker-compose --vesion`
+    - Tiếp theo kiểm tra (trình quản lý tập trung cho các container ):
+
+        `docker-machine --version`
+
+## Cách dùng
+Vì là trên Window nên việc  dùng `bash shell` hơi bất tiện nên mình dùng luôn `docker-cli`
+```sh
+    # list all image
+    docker images
+
+    # list all image zombies(dangling)
+    docker images --filter "dangling=true"
+
+    # remove all image zombies(dangling)
+    # -q will only number 
+    docker rmi $(docker images -f "dangling=true" -q)
+    
+```
+Và còn rất nhiều command tại đây  https://docs.docker.com/engine/reference/commandline/docker/
+
+## Tool for monitor
+Mặc định có 1 công cụ trong  `Docker Toolbox on Windows` ta có [Kitematic](https://kitematic.com/). Tuy nhiên có không có sẵn ta phải download thêm về tại 
+[Kimatic release page](https://github.com/docker/kitematic/releases) (chọn window platform)
+rồi extract to `C:\Program Files\Docker\Kitematic`. 
+
+![open kitematic](https://s3-ap-northeast-1.amazonaws.com/huongnhdh.blog/OpenKitematic.png)
+
+
+Đây là 1 tool open source hỗ trợ các thao tác cơ bản nhất khi dùng Docker  tuy nhiên nó còn nhiều hạn chế, cụ thể là, các chức năng chính của Kitematic hỗ trợ: 
+- Quản lý container(remove, stop, start).
+- xem log của container (nếu container có setting log ra stdout)
+- Xem setting của container 
+- Mở termnal cho container 
+
+Còn các chức năng khác khả cần thiết nhưng Kitematic chưa hỗ trợ, ví dụ như monitor resource (CPU, ram, disk, network), hỗ trợ lauching một container, quản lý image trên local, lệnh dọn tất cả các container rác, ....
+
+## Link tham khảo
+- https://docs.docker.com/docker-for-windows/
+- https://awesome-docker.netlify.com/
+- https://docs.docker.com/engine/reference/commandline/docker/
