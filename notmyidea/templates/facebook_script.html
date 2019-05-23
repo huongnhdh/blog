@@ -1,8 +1,32 @@
 <div id="fb-root"></div>
-<script>(function(d, s, id) {
+<!-- Officel way -->
+<!-- <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
   if (d.getElementById(id)) return;
   js = d.createElement(s); js.id = id;
   js.src = 'https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.2&appId=362195391033166&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+}(document, 'script', 'facebook-jssdk'));</script> -->
+
+<!-- https://stackoverflow.com/questions/31683518/load-facebook-comments-plugin-async -->
+<script>
+  window.fbAsyncInit = function () {
+      FB.init({appId: '362195391033166', version: 3.2, xfbml: true});
+
+      if (typeof facebookInit == 'function') {
+          facebookInit();
+      }
+  };
+  (function () {
+      var e = document.createElement('script');
+      e.src = document.location.protocol + '//connect.facebook.net/vi_VN/all.js';
+      e.async = true;
+      document.getElementById('fb-root').appendChild(e);
+  }());
+
+
+  function facebookInit() {
+      console.log('Found FB: Loading comments.');
+      FB.XFBML.parse();
+  }
+</script>
