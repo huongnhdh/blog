@@ -11,7 +11,7 @@
 <!-- https://stackoverflow.com/questions/31683518/load-facebook-comments-plugin-async -->
 <script>
   window.fbAsyncInit = function () {
-      FB.init({appId: '362195391033166', version: 3.2, xfbml: true});
+      FB.init({appId: '362195391033166', version: 'v3.2', xfbml: true});
 
       if (typeof facebookInit == 'function') {
           facebookInit();
@@ -19,7 +19,7 @@
   };
   (function () {
       var e = document.createElement('script');
-      e.src = document.location.protocol + '//connect.facebook.net/vi_VN/all.js';
+      e.src = 'https://connect.facebook.net/vi_VN/sdk.js';
       e.async = true;
       document.getElementById('fb-root').appendChild(e);
   }());
