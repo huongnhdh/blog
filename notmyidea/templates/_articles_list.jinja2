@@ -1,0 +1,22 @@
+{% for article in articles_page.object_list %}
+  <article class="card-cover">
+      <header>
+      <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{
+          article.title }}</a></h1>
+          {% include '_article_infos.jinja2' %}
+      </header>
+      <div class="entry-content">   
+      <!-- {% if article.image is defined %} 
+          <img src="{{ article.image }}" alt="article page" class="article-image-thumbnail" />
+      {% endif %} -->          
+      {{ article.summary }} 
+      <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more...</a>
+      <!-- {% include 'comments.html' %} -->
+      </div><!-- /.entry-content -->
+  </article>
+    {# {% if loop.last %}
+    {% if loop.length > 1 or articles_page.has_other_pages() %} #}
+{% endfor %}
+{% if articles_page.has_other_pages() %}
+    {% include 'pagination.html' %}
+{% endif %}

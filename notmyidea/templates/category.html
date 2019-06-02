@@ -1,2 +1,18 @@
-{% extends "_catetgory.jinja2" %}
+{% extends "base.html" %}
+{% block content_title %}{% endblock %}
 {% block title %}{{ SITENAME }} - {{ category }}{% endblock %}
+{% block content %}
+  {% if articles %}
+    <section id="content" class="body">
+      {% include "_articles_list.jinja2" %}     
+    </section>
+
+  {% else %}
+    <section id="content" class="body">
+      <h2>Pages</h2>
+      {% for page in pages %}
+      <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </section>
+  {% endif %}
+{% endblock content %}

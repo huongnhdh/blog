@@ -2,6 +2,7 @@ Title: 2018 chuyện giờ mới kể
 Date: 2019-02-06 00:00
 Category: Tản mạn
 Tags: diary
+status: draft
 Slug: 2018-chuyen-gio-chua-ke
 Author: HuongNHD
 Summary: 2018 đã qua, đối với mỗi người đều có những trải nghiệm của riêng mình, tôi cũng thế , và tôi viết bài viết này để lưu lại những trải nghiệm của tôi trong năm 2018, cũng như chia sẻ cho những người có duyên ghé qua blog của tôi.

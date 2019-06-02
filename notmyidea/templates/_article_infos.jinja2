@@ -1,21 +1,13 @@
 <div class="article-info">
   <abbr  title="{{ article.date.isoformat() }}">
           <i class="far fa-calendar-alt"></i> 
-          {{ article.locale_date }}
+          {{ article.date.strftime('%Y-%m-%d') }}
   </abbr>
-    {% if article.authors %}
-      <address >
-              {# <i class="fas fa-user-edit"></i>  #}
-              {% for author in article.authors %}
-                  <a class="url fn" href="{{ SITEURL }}/{{ author.url }}">{{ author }}</a>
-              {% endfor %}
-      </address>
-  {% endif %}
   {% if article.tags %}
-          <span class="tag is-info">
-              {% for tag in article.tags %}
-                <a href="{{ SITEURL }}/{{ tag.url }}" class="tag">#{{ tag | escape }}</a> 
-              {% endfor %}
-          </span>
-  {% endif %}
+    <div class="tags">
+      {% for tag in article.tags %}
+        <a  href="{{ SITEURL }}/{{ tag.url }}"><span class="tag">#{{ tag | escape }} </span> </a>
+       {% endfor %}
+    </div>
+   {% endif %}
 </div>

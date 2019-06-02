@@ -7,9 +7,9 @@
 </section>
 <header id="banner" class="body">
     <ul id="ul-nav-top">
-      <li><a href="{{ SITEURL }}" class="{% if page_name == 'index' %}active{% endif %}">Home</a></li>
+      <li><a href="{{ SITEURL }}" class="{% if page_name == 'index' %}active{% endif %} nav-item" >Home</a></li>
       {% for title, link in MENUITEMS %}
-      <li><a href="{{ SITEURL }}{{ link }}" class="{% if page_name == title.lower() %}active{% endif %}">{{ title }}</a></li>
+      <li><a href="{{ SITEURL }}{{ link }}" class="{% if page_name == title.lower() %}active{% endif %} nav-item">{{ title }}</a></li>
       {% endfor %}
     </ul>
   <nav>

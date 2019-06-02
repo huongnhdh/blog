@@ -56,3 +56,4 @@ MENUITEMS = (
 GITHUB_URL = 'https://github.com/huongnhdh/'
 
 IMAGES_PATH = '{}/images/'.format(SITEURL)
+# SERVER_PATH_SUFFIXES = ['.html', '/index.html', '/', '']

@@ -1,40 +1,16 @@
 {% extends "base.html" %}
 {% block content_title %}{% endblock %}
 {% block content %}
-{% if articles %}
-  <section id="content" class="body">
-    <ol class="">
-      {{articles_paginator|pprint}}
-      {% for article in articles_page.object_list %}
-            <article class="card-cover">
-              <header>
-                <h1><a href="{{ SITEURL }}/{{ article.url }}" rel="bookmark" title="Permalink to {{ article.title|striptags }}">{{
-                    article.title }}</a></h1>
-                    {% include '_article_infos.jinja2' %}
-              </header>
-              <div class="entry-content">   
-                {% if article.image is defined %} 
-                    <img src="{{ article.image }}" alt="article page" class="article-image-thumbnail" />
-                {% endif %}           
-                {{ article.summary }}
-                <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more...</a>
-                <!-- {% include 'comments.html' %} -->
-              </div><!-- /.entry-content -->
-            </article>
-          {# {% if loop.last %}
-          {% if loop.length > 1 or articles_page.has_other_pages() %} #}
-        {% endfor %}
-        {% if articles_page.has_other_pages() %}
-        {% include 'pagination.html' %}
-        {% endif %}
+  {% if articles %}
+    <section id="content" class="body">
+      {% include "_articles_list.jinja2" %}
     </section>
-
-    {% else %}
+  {% else %}
     <section id="content" class="body">
       <h2>Pages</h2>
       {% for page in pages %}
-      <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
+        <li><a href="{{ SITEURL }}/{{ page.url }}">{{ page.title }}</a></li>
       {% endfor %}
     </section>
-    {% endif %}
+  {% endif %}
 {% endblock content %}

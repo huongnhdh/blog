@@ -30,6 +30,7 @@
 
   <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
   <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
 
@@ -73,7 +74,7 @@
         <h2>{{ LINKS_WIDGET_NAME | default('links') }}</h2>
         <ul>
           {% for name, link in LINKS %}
-          <li><a href="{{ link }}">{{ name }}</a></li>
+          <li><a href="{{ link }}" class="nav-item">{{ name }}</a></li>
           {% endfor %}
         </ul>
       </div><!-- /.blogroll -->
