@@ -59,10 +59,12 @@
   <meta name="msapplication-TileColor" content="#ffffff">
   <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
   <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/css/{{ CSS_FILE }}" />
   {% block extra_head %}{% endblock extra_head %}
 </head>
 
-<body id="index" class="home">
+<body id="index" class="home" data-no-instant>
   <div class="container">
     {% include 'github.html' %}
     {% include '_banner.html' %}
@@ -110,8 +112,6 @@
   </div>
     {% include 'analytics.html' %}
     {% include 'disqus_script.html' %}
-    {% include 'facebook_script.html' %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/instantclick/3.1.0/instantclick.min.js" data-no-instant></script>
-    <script data-no-instant>InstantClick.init();</script>
+    <script data-no-instant src="{{ SITEURL }}/{{ THEME_STATIC_DIR }}/javascripts/init.js"></script>
 </body>
 </html>

@@ -8,6 +8,7 @@
         </h3>     
          {% include '_article_infos.jinja2' %}
         {# {% include 'twitter.html' %} #}
+        <div class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
       </header>
        
       <div class="entry-content">
@@ -24,13 +25,15 @@
         </div>
       </div><!-- /.entry-content -->
       {% if article.status != "draft" %}
-        <div class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
-        <div class="comments">
+        <div id="fb-root"></div>
           <h2>Comments !</h2>
-          <div id="disqus_thread"></div>
-          <div class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="100%" data-numposts="5" >  </div>
-          <noscript>Please enable JavaScript to view the comments.</noscript>
+          <div data-no-instant class="fb-like" data-href="{{ SITEURL }}/{{ article.url }}" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+          <div data-no-instant class="fb-comments" data-href="{{ SITEURL }}/{{ article.url }}" data-width="" data-numposts="5"></div>
         </div>
-      </div>
+        <!-- <script async defer data-no-instant crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=362195391033166&autoLogAppEvents=1"></script>
+        <script data-no-instant>
+          /* Google Analytics code here, without ga('send', 'pageview') */          
+          
+        </script> -->
       {% endif %}
 </article>

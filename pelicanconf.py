@@ -48,12 +48,36 @@ EXTRA_PATH_METADATA = {
 }
 
 MENUITEMS = (
-    ('Archives', '/archives.html'),
-    ('Tags', '/tags.html'),
-    ('Authors', '/authors.html'),
+    ('Archives', '/archives'),
+    ('Tags', '/tags'),
+    ('Authors', '/authors'),
 )
 
 GITHUB_URL = 'https://github.com/huongnhdh/'
 
 IMAGES_PATH = '{}/images/'.format(SITEURL)
+
 # SERVER_PATH_SUFFIXES = ['.html', '/index.html', '/', '']
+ARTICLE_SAVE_AS = '{slug}/index.html'
+ARTICLE_URL = '{slug}'
+
+TAGS_SAVE_AS = 'tags/index.html'
+TAGS_URL = 'tags'
+
+TAG_SAVE_AS = 'tag/{slug}/index.html'
+TAG_URL = 'tag/{slug}'
+
+AUTHORS_SAVE_AS = 'authors/index.html'
+AUTHORS_URL = 'authors'
+
+AUTHOR_SAVE_AS = 'author/{slug}/index.html'
+AUTHOR_URL =  'author/{slug}'
+
+CATEGORIES_SAVE_AS = 'categories/index.html'
+CATEGORIES_URL = 'categories'
+
+CATEGORY_SAVE_AS = 'category/{slug}/index.html'
+CATEGORY_URL = 'category/{slug}'
+
+ARCHIVES_SAVE_AS = 'archives/index.html'
+ARCHIVES_URL = 'archives'
