@@ -5,13 +5,12 @@
           article.title }}</a></h1>
           {% include '_article_infos.jinja2' %}
       </header>
-      <div class="entry-content">   
-      <!-- {% if article.image is defined %} 
+      <div class="entry-content">
+      <!-- {% if article.image is defined %}
           <img src="{{ article.image }}" alt="article page" class="article-image-thumbnail" />
-      {% endif %} -->          
-      {{ article.summary }} 
+      {% endif %} -->
+      {{ article.summary }}
       <a class="readmore" href="{{ SITEURL }}/{{ article.url }}">read more...</a>
-      <!-- {% include 'comments.html' %} -->
       </div><!-- /.entry-content -->
   </article>
     {# {% if loop.last %}
