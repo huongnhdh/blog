@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Huongnhd" />
+  <meta name="robots" content="index, follow"/>
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://huongnhdh.github.io/blog/docker-docker-composer-in-Window-10" />
+  <meta property="og:title" content="Dùng Docker trên Window 10" />
+  <meta property="og:description" content="Đây là hướng dẫn cho việc cài đặt Docker desktop phục vụ cho việc development trên Window, post này mình cài đặt cho Docker version 18.09.2. (Version cũ thì cách cài đặt cũng sẽ khác) Hướng..." />
+  <meta property="og:image" content="https://s3-ap-northeast-1.amazonaws.com/huongnhdh.blog/docker-windows.png " />
+
+  <link rel="canonical" href="https://huongnhdh.github.io/blog" />
+
+  <title>Dùng Docker trên Window 10</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="https://huongnhdh.github.io/blog/theme/css/main.css" />
+
+  <link href="https://huongnhdh.github.io/blog/feeds/all.rss.xml"
+    type="application/rss+xml" rel="alternate" title="Huongnhd's journey  RSS Feed" />
+  <link rel="apple-touch-icon" sizes="57x57" href="https://huongnhdh.github.io/blog/extra/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://huongnhdh.github.io/blog/extra/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://huongnhdh.github.io/blog/extra/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://huongnhdh.github.io/blog/extra/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://huongnhdh.github.io/blog/extra/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://huongnhdh.github.io/blog/extra/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://huongnhdh.github.io/blog/extra/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://huongnhdh.github.io/blog/extra/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://huongnhdh.github.io/blog/extra/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://huongnhdh.github.io/blog/extra/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://huongnhdh.github.io/blog/extra/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://huongnhdh.github.io/blog/extra/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://huongnhdh.github.io/blog/extra/favicon-16x16.png">
+  <link rel="manifest" href="https://huongnhdh.github.io/blog/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://huongnhdh.github.io/blog/theme/css/main.css" />
+</head>
+
+<body id="index" class="home" data-no-instant>
+  <div class="container">
+<a href="https://github.com/huongnhdh/">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+<section class="banner-section">
+  <div class='msg'>
+    <h1><a href="https://huongnhdh.github.io/blog">Huongnhd's journey </a></h1>
+    <p>Go Slow…To Go Fast!</p>
+  </div>
+  <p class="banner">Greatness Awaits</p>
+</section>
+<header id="banner" class="body">
+    <ul id="ul-nav-top">
+      <li><a href="https://huongnhdh.github.io/blog" class=" nav-item" >Home</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/archives" class=" nav-item">Archives</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/tags" class=" nav-item">Tags</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/authors" class=" nav-item">Authors</a></li>
+    </ul>
+  <nav>
+    <ul class="columns">
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/architecture">Architecture</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/security">Security</a></li>
+        <li class="column  active  " ><a href="https://huongnhdh.github.io/blog/category/tools">Tools</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/workflow">Workflow</a></li>
+    </ul>
+  </nav>
+</header><!-- /#banner -->  <section id="content" class="body">
+  <article>
+      <header>          
+        <h3 class="entry-title">
+          <a href="https://huongnhdh.github.io/blog/docker-docker-composer-in-Window-10" rel="bookmark"
+            title="Permalink to Dùng Docker trên Window 10">Dùng Docker trên Window 10
+          </a>
+           
+        </h3>     
+<div class="article-info">
+  <abbr  title="2019-05-11T14:49:00+07:00">
+          <i class="far fa-calendar-alt"></i> 
+          2019-05-11
+  </abbr>
+    <div class="tags">
+        <a  href="https://huongnhdh.github.io/blog/tag/docker"><span class="tag">#docker </span> </a>
+        <a  href="https://huongnhdh.github.io/blog/tag/install-guide"><span class="tag">#install-guide </span> </a>
+    </div>
+</div>        <div class="fb-like" data-href="https://huongnhdh.github.io/blog/docker-docker-composer-in-Window-10" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      </header>
+       
+      <div class="entry-content">
+        <div> 
+ 
+                <div>
+                  <img src="https://s3-ap-northeast-1.amazonaws.com/huongnhdh.blog/docker-windows.png" alt="article page" class="article-image" />
+               </div>
+
+        </div>
+        <div class="blog-content">
+          <p>Đây là hướng dẫn cho việc cài đặt Docker desktop phục vụ cho việc development trên Window, post này mình cài đặt cho Docker version 18.09.2. (Version cũ thì cách cài đặt cũng sẽ khác)</p>
+<h2>Hướng dẫn cài đặt</h2>
+<hr>
+<h3>1. Yêu cầu hệ thống chạy Docker trên Window</h3>
+<p>CPU: CPU cần phải hỗ trợ virtualization, và phải 64 bit.</p>
+<p>OS:</p>
+<ul>
+<li>Window 10 Professtional 64 bit </li>
+<li>Window 10 Enterprise 64 bit</li>
+<li>Windown 10 Education (1607 Anniversary Update, Build 14393 or later)</li>
+</ul>
+<p>Thông tin này được trên thông báo trên trang <a href="https://docs.docker.com/docker-for-windows/install/#what-to-know-before-you-install">hướng dẫn cài đặt của Docker</a></p>
+<h3>2. Download Docker CE (community edition)</h3>
+<p>Docker có 2 phiên bản là Docker CE (Community Edition) sẽ khác với Docker EE (Enterprise Edition)</p>
+<ul>
+<li>CE thì dùng cho developer các nhân hoặc các nhóm nhỏ để tìm hiểu và build môi trường development</li>
+<li>EE là phiên bản dành cho doanh nghiệp, có các tính năng đặc biệt 1 trong số đó là hỗ trợ scale ứng dụng. </li>
+</ul>
+<p>Tìm hiểu thêm sự khác nhau về tính năng giữa 2 phiên bản tại <a href="https://docs.docker.com/install/overview/">đây</a></p>
+<p>Download Docker CE cho Window trên docker hub tại đây <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">link download</a> (Để download được thì cần đăng nhập vào docker hub)</p>
+<h3>3. Sau khi cài đặt xong "Docker for Windows Installer".</h3>
+<p>Mở ứng dụng docker và xác nhận lại Docker đã hoạt động chưa.</p>
+<ul>
+<li>Đầu tiên nếu OS chưa active Hyper-V, thì sẽ tự động restart lại Window</li>
+<li>Tiếp theo là login vào tài khoản DockerHub (sẽ có màn hình tự động hiện lên để đăng nhập)</li>
+<li>Mở cmd test lại bằng câu lệnh</li>
+</ul>
+<div class="highlight"><pre><span></span>docker run hello-world
+<span class="c1"># Nếu gặp lỗi    `Error response from daemon: Get https://registry-1.docker.io/v2/: 540 net/http: request canceled while waiting for         connection (Client.Timeout exceeded while awaiting headers)`</span>
+<span class="c1"># Chỉ cần `docker login` rồi restart lại Window là ok</span>
+
+docker-compose --vesion
+<span class="c1"># Tiếp theo kiểm tra docker-compose (Quản lý docker containers khi một ứng dụng cần nhiều docker. vd một ứng dụng blog cần 1 container run nginx, 1 container apache, 1 container mySQL chẳng hạn)</span>
+
+docker-machine --version
+<span class="c1"># trình quản lý tập trung cho các container</span>
+</pre></div>
+
+
+<h2>Cách dùng</h2>
+<hr>
+<p>Vì là trên Window nên việc dùng <code>bash shell</code> hơi bất tiện nên mình dùng luôn <code>docker-cli</code></p>
+<div class="highlight"><pre><span></span><span class="c1"># list all image</span>
+ docker images
+
+<span class="c1"># list all image zombies(dangling)</span>
+ docker images --filter <span class="s2">&quot;dangling=true&quot;</span>
+
+<span class="c1"># remove all image zombies(dangling)</span>
+<span class="c1"># -q will only number </span>
+ docker rmi <span class="k">$(</span>docker images -f <span class="s2">&quot;dangling=true&quot;</span> -q<span class="k">)</span>
+</pre></div>
+
+
+<p>Và còn rất nhiều command tại đây <a href="https://docs.docker.com/engine/reference/commandline/docker/">https://docs.docker.com/engine/reference/commandline/docker/</a></p>
+<h2>Tool for monitor</h2>
+<hr>
+<p>Mặc định có 1 công cụ trong <code>Docker Toolbox on Windows</code> ta có <a href="https://kitematic.com/">Kitematic</a>. Tuy nhiên có không có sẵn ta phải download thêm về tại 
+<a href="https://github.com/docker/kitematic/releases">Kimatic release page</a> (chọn platform là Window)
+rồi extract to <code>C:\Program Files\Docker\Kitematic</code>. </p>
+<p><img alt="open kitematic" src="https://s3-ap-northeast-1.amazonaws.com/huongnhdh.blog/OpenKitematic.png"></p>
+<p>Đây là 1 tool open source hỗ trợ các thao tác cơ bản nhất khi dùng Docker tuy nhiên nó còn nhiều hạn chế, cụ thể là, các chức năng chính của Kitematic hỗ trợ: </p>
+<ul>
+<li>Quản lý container(remove, stop, start).</li>
+<li>Xem log của container (nếu container có setting log ra stdout)</li>
+<li>Xem setting của container </li>
+<li>Mở termnal cho container </li>
+</ul>
+<p>Còn các chức năng khác khả cần thiết nhưng Kitematic chưa hỗ trợ, ví dụ như monitor resource (CPU, ram, disk, network), hỗ trợ create một container, quản lý image trên local, lệnh dọn tất cả các container rác, ....</p>
+<h2>Link tham khảo</h2>
+<hr>
+<ul>
+<li><a href="https://docs.docker.com/docker-for-windows/">https://docs.docker.com/docker-for-windows/</a></li>
+<li><a href="https://awesome-docker.netlify.com/">https://awesome-docker.netlify.com/</a></li>
+<li><a href="https://docs.docker.com/engine/reference/commandline/docker/">https://docs.docker.com/engine/reference/commandline/docker/</a></li>
+</ul>
+        </div>
+      </div><!-- /.entry-content -->
+        <div id="fb-root"></div>
+          <h2>Comments !</h2>
+          <div data-no-instant class="fb-like" data-href="https://huongnhdh.github.io/blog/docker-docker-composer-in-Window-10" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+          <div data-no-instant class="fb-comments" data-href="https://huongnhdh.github.io/blog/docker-docker-composer-in-Window-10" data-width="" data-numposts="5"></div>
+        </div>
+        <!-- <script async defer data-no-instant crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=362195391033166&autoLogAppEvents=1"></script>
+        <script data-no-instant>
+          /* Google Analytics code here, without ga('send', 'pageview') */          
+          
+        </script> -->
+</article>  </section>
+    <section id="extras" class="body">
+      <div class="social">
+        <h2>social</h2>
+        <ul>
+          <li><a href="https://huongnhdh.github.io/blog/feeds/all.rss.xml"
+              type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+          <li><a href="https://github.com/huongnhdh">github</a></li>
+        </ul>
+      </div><!-- /.social -->
+    </section><!-- /#extras -->
+
+    <footer id="contentinfo" class="body">
+      <address id="about" class="vcard body">
+        Copyright © 2018 by <a href="https://github.com/huongnhdh">HuongNHD</a>.
+        <p>The site was generate by <a href="https://github.com/getpelican/pelican">Pelican</a> with theme <a href="#"> notmyidea</a> modified, thanks!</p>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+  </div>
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-131511951-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script data-no-instant src="https://huongnhdh.github.io/blog/theme/javascripts/init.js"></script>
+</body>
+</html>

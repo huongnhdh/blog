@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Huongnhd" />
+  <meta name="robots" content="index, follow"/>
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://huongnhdh.github.io/blog/paging-sorting-filtering-restful-api" />
+  <meta property="og:title" content="Paging, Sorting, Filtering trong Restful-API" />
+  <meta property="og:description" content="Paging Use page & per_page query parameter, return x-total-count header ( Ngoài việc dùng page & per_page, chúng ta cũng có thể sử dụng offset & limit với ý nghĩa tương tự ) Để phân trang cho..." />
+  <meta property="og:image" content=" https://huongnhdh.github.io/blog/images/opengraph-default.png " />
+
+  <link rel="canonical" href="https://huongnhdh.github.io/blog" />
+
+  <title>Paging, Sorting, Filtering trong Restful-API</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="https://huongnhdh.github.io/blog/theme/css/main.css" />
+
+  <link href="https://huongnhdh.github.io/blog/feeds/all.rss.xml"
+    type="application/rss+xml" rel="alternate" title="Huongnhd's journey  RSS Feed" />
+  <link rel="apple-touch-icon" sizes="57x57" href="https://huongnhdh.github.io/blog/extra/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://huongnhdh.github.io/blog/extra/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://huongnhdh.github.io/blog/extra/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://huongnhdh.github.io/blog/extra/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://huongnhdh.github.io/blog/extra/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://huongnhdh.github.io/blog/extra/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://huongnhdh.github.io/blog/extra/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://huongnhdh.github.io/blog/extra/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://huongnhdh.github.io/blog/extra/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://huongnhdh.github.io/blog/extra/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://huongnhdh.github.io/blog/extra/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://huongnhdh.github.io/blog/extra/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://huongnhdh.github.io/blog/extra/favicon-16x16.png">
+  <link rel="manifest" href="https://huongnhdh.github.io/blog/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://huongnhdh.github.io/blog/theme/css/main.css" />
+</head>
+
+<body id="index" class="home" data-no-instant>
+  <div class="container">
+<a href="https://github.com/huongnhdh/">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+<section class="banner-section">
+  <div class='msg'>
+    <h1><a href="https://huongnhdh.github.io/blog">Huongnhd's journey </a></h1>
+    <p>Go Slow…To Go Fast!</p>
+  </div>
+  <p class="banner">Greatness Awaits</p>
+</section>
+<header id="banner" class="body">
+    <ul id="ul-nav-top">
+      <li><a href="https://huongnhdh.github.io/blog" class=" nav-item" >Home</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/archives" class=" nav-item">Archives</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/tags" class=" nav-item">Tags</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/authors" class=" nav-item">Authors</a></li>
+    </ul>
+  <nav>
+    <ul class="columns">
+        <li class="column  active  " ><a href="https://huongnhdh.github.io/blog/category/architecture">Architecture</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/security">Security</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/tools">Tools</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/workflow">Workflow</a></li>
+    </ul>
+  </nav>
+</header><!-- /#banner -->  <section id="content" class="body">
+  <article>
+      <header>          
+        <h3 class="entry-title">
+          <a href="https://huongnhdh.github.io/blog/paging-sorting-filtering-restful-api" rel="bookmark"
+            title="Permalink to Paging, Sorting, Filtering trong Restful-API">Paging, Sorting, Filtering trong Restful-API
+          </a>
+           
+        </h3>     
+<div class="article-info">
+  <abbr  title="2019-02-18T10:20:00+07:00">
+          <i class="far fa-calendar-alt"></i> 
+          2019-02-18
+  </abbr>
+    <div class="tags">
+        <a  href="https://huongnhdh.github.io/blog/tag/restful-api"><span class="tag">#restful-api </span> </a>
+        <a  href="https://huongnhdh.github.io/blog/tag/analysis"><span class="tag">#analysis </span> </a>
+        <a  href="https://huongnhdh.github.io/blog/tag/api-design"><span class="tag">#api-design </span> </a>
+        <a  href="https://huongnhdh.github.io/blog/tag/restful-api-design"><span class="tag">#restful-api-design </span> </a>
+    </div>
+</div>        <div class="fb-like" data-href="https://huongnhdh.github.io/blog/paging-sorting-filtering-restful-api" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      </header>
+       
+      <div class="entry-content">
+        <div> 
+
+        </div>
+        <div class="blog-content">
+          <h2>Paging</h2>
+<blockquote>
+<p><code>Use page &amp; per_page query parameter, return x-total-count header</code></p>
+</blockquote>
+<p><em>( Ngoài việc dùng <code>page &amp; per_page</code>, chúng ta cũng có thể sử dụng <code>offset &amp; limit</code>  với ý nghĩa tương tự )</em></p>
+<p>Để phân trang cho kết quả của bạn sử dụng <code>page</code> &amp; <code>per_page</code> trong query parameter, ví dụ api cần trả về các item từ 50 đến 100 thì, câu lệnh sẽ là</p>
+<div class="highlight"><pre><span></span> GET /item?page<span class="o">=</span><span class="m">2</span><span class="p">&amp;</span><span class="nv">per_page</span><span class="o">=</span><span class="m">50</span>
+</pre></div>
+
+
+<p>Một số lưu ý phân trang
+1. Trả về  tổng số items thông qua <code>X-Total-Count</code> header
+2. Nếu muốn cung cấp link to <code>previous and next page</code> thì có thể sử dụng Link HTTP header.
+3. Trong code mà bạn cài đặt nên set maximum limit, ví dụ 1000 chẳng hạn, để tránh những vấn đề tại server</p>
+<p>Ngoài ra còn nhiều cách khác để phân trang chẳng hạn như dùng Range header. Khi nghĩ về end user của bạn, tức client: sẽ dễ dàng phân trang bằng thông số <code>page</code> và <code>per_page</code> của GET request, hoặc định nghĩa một range header.</p>
+<h2>Sorting</h2>
+<blockquote>
+<p><code>Using sort parameter with value has prefix is minus (-) sign for desc and no sign for asc</code></p>
+</blockquote>
+<p>Cách đơn giản nhất để sort là sử dụng sort query params, cho phép bạn định nghĩa thông qua  minus (-) sign,
+For example:</p>
+<div class="highlight"><pre><span></span>GET /items?sort<span class="o">=</span>-created_at <span class="c1"># desc</span>
+GET /items?sort<span class="o">=</span>created_at <span class="c1"># asc</span>
+</pre></div>
+
+
+<p><em>(Đây là cách đơn giản nhất, nhưng vẫn cò một số style khác như <code>sort[desc]=created_at</code>,<code>sort:desc=created_at</code>  or <code>sort=created_at.desc</code>)</em></p>
+<h2>Filtering</h2>
+<blockquote>
+<p>Use a unique query parameter for each of your fields</p>
+</blockquote>
+<p>ex:</p>
+<div class="highlight"><pre><span></span>GET /items?first_name<span class="o">=</span>huong
+GET /items?title<span class="o">=</span>developer
+</pre></div>
+
+
+<h2>Searching</h2>
+<blockquote>
+<p><code>For fulltext search, should be using q params</code></p>
+</blockquote>
+<p>Nếu muốn tìm kiếm một giá trị mà phạm vi full-text search, cách đơn giản nhất là dùng <code>q</code> params</p>
+<p>Ex: Bạn muốn tìm kiếm mọi thứ liên quan đến "Huong Ngo"</p>
+<div class="highlight"><pre><span></span>GET /users?q<span class="o">=</span><span class="s2">&quot;Huong Ngo&quot;</span>
+</pre></div>
+
+
+<h2>Retrieving specific fields</h2>
+<blockquote>
+<p><code>Using fields parameter and slit value by ','</code></p>
+</blockquote>
+<p>API nên chỉ cho phép user của bạn chỉ nhận  vào một số fields nhất định thay vì toàn bộ object, khi đó ta nên dùng từ khóa là <code>fields</code> và sử dụng dấy chấm phấy ',' để tách các giá trị</p>
+<p>Ex:</p>
+<div class="highlight"><pre><span></span>GET /users?fields<span class="o">=</span>email,scrore,alias_name
+</pre></div>
+
+
+<h2>Advanced filtering</h2>
+<blockquote>
+<p><code>Using LHS brackets with an operator</code> for intuitive or <code>Lucene or ElasticSearch syntax</code> for flexible issue</p>
+</blockquote>
+<p>Phương thức filtering được nhắc đến ở trên, sử dụng query parameter, làm việc khá ổn nhưng chỉ với các filter là exact match ( chính xác hoàn toàn ). Nhưng nếu bạn cần những filter dạng như:</p>
+<ul>
+<li>10 &lt;= price &lt;= 100</li>
+<li>status IS NOT past</li>
+<li>user is manager or director</li>
+</ul>
+<p>Có nhiều cách để thực hiện:
+ 1. Using LHS brackets with an operator: <code>price[lte]=200 status[ne]=past</code>
+ 2. Using RHS colon with an operator: <code>price=lte:200 status=ne:past</code>
+ 3. Using Lucene syntax or ElasticSearch Simple Query strings directly: q=price:&lt;200 q=-status:past</p>
+<p>Nhìn bảng so sánh dưới đây để có thêm thông tin:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Điểm mạnh</th>
+<th>Hạn chế</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LSH Brackets with an operator</code></td>
+<td>- Người sử dụng (front-end dev) dễ  dàng sử dụng <br> - Tương đối đơn giản để parse ở phía server-side  <br> - Trông khá trực quan</td>
+<td>- Không thể  thực hiện OR cho combined filters</td>
+</tr>
+<tr>
+<td><code>RHS colon with an operator</code></td>
+<td>- Dễ dàng parser tại server side <br> - Người sử dụng (front-end dev) dễ  dàng sử dụng</td>
+<td>- Không thể  thực hiện OR cho combined filters - Ít trực quan hơn <code>LSH Brackets with an operator</code></td>
+</tr>
+<tr>
+<td><code>Lucene or ElasticSearch syntax</code></td>
+<td>- Là phương pháp linh hoạt nhất trong các phương pháp trên <br> Gần như không cần parse phía server (có thể đẩy trực tiếp cho <code>elasticsearch</code>)</td>
+<td>- Cú pháp không trực quan như các phương pháp trên, cần phải học để sử dụng nhưng không quá khó</td>
+</tr>
+</tbody>
+</table>
+<p>Nếu bạn cần một giải pháp filter linh hoạt nhất có thể dành cho front-end của bạn, cho phép nó query trực tiếp vào DB thông qua API, thì sử dụng trực tiếp <code>Lucene or ElasticSearch syntax</code> sẽ hợp lý hơn ngay cả khi nó đòi hỏi người sử dụng phải học để dùng nó.</p>
+<p>Tuy nhiên, trong hầu hết các trường hợp phổ biến, thì việc sử dụng <code>LSH Brackets with an operator</code> là giải pháp được recomend nhất nếu API của bạn có dùng filter nâng cao</p>
+<p>Ref: <br>
+https://www.gvj-web.com/blog/paging-sorting-filtering-restful-api <br>
+https://www.moesif.com/blog/technical/api-design/REST-API-Design-Filtering-Sorting-and-Pagination</p>
+        </div>
+      </div><!-- /.entry-content -->
+        <div id="fb-root"></div>
+          <h2>Comments !</h2>
+          <div data-no-instant class="fb-like" data-href="https://huongnhdh.github.io/blog/paging-sorting-filtering-restful-api" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+          <div data-no-instant class="fb-comments" data-href="https://huongnhdh.github.io/blog/paging-sorting-filtering-restful-api" data-width="" data-numposts="5"></div>
+        </div>
+        <!-- <script async defer data-no-instant crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=362195391033166&autoLogAppEvents=1"></script>
+        <script data-no-instant>
+          /* Google Analytics code here, without ga('send', 'pageview') */          
+          
+        </script> -->
+</article>  </section>
+    <section id="extras" class="body">
+      <div class="social">
+        <h2>social</h2>
+        <ul>
+          <li><a href="https://huongnhdh.github.io/blog/feeds/all.rss.xml"
+              type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+          <li><a href="https://github.com/huongnhdh">github</a></li>
+        </ul>
+      </div><!-- /.social -->
+    </section><!-- /#extras -->
+
+    <footer id="contentinfo" class="body">
+      <address id="about" class="vcard body">
+        Copyright © 2018 by <a href="https://github.com/huongnhdh">HuongNHD</a>.
+        <p>The site was generate by <a href="https://github.com/getpelican/pelican">Pelican</a> with theme <a href="#"> notmyidea</a> modified, thanks!</p>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+  </div>
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-131511951-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script data-no-instant src="https://huongnhdh.github.io/blog/theme/javascripts/init.js"></script>
+</body>
+</html>

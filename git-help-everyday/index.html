@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="author" content="Huongnhd" />
+  <meta name="robots" content="index, follow"/>
+  
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://huongnhdh.github.io/blog/git-help-everyday" />
+  <meta property="og:title" content="git help everyday" />
+  <meta property="og:description" content="NAME(Tên) giteveryday - Một bộ lệnh tối thiểu hữu ích cho `Git` SYNOPSIS(Tóm tắt) Everyday Git với 20 lệnh hoặc hơn DESCRIPTION(Mô tả) Người dùng Git có thể được phân nhóm thành bốn loại với..." />
+  <meta property="og:image" content=" https://huongnhdh.github.io/blog/images/opengraph-default.png " />
+
+  <link rel="canonical" href="https://huongnhdh.github.io/blog" />
+
+  <title>git help everyday</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.min.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+  <link rel="stylesheet" href="https://huongnhdh.github.io/blog/theme/css/main.css" />
+
+  <link href="https://huongnhdh.github.io/blog/feeds/all.rss.xml"
+    type="application/rss+xml" rel="alternate" title="Huongnhd's journey  RSS Feed" />
+  <link rel="apple-touch-icon" sizes="57x57" href="https://huongnhdh.github.io/blog/extra/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="https://huongnhdh.github.io/blog/extra/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="https://huongnhdh.github.io/blog/extra/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://huongnhdh.github.io/blog/extra/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="https://huongnhdh.github.io/blog/extra/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="https://huongnhdh.github.io/blog/extra/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="https://huongnhdh.github.io/blog/extra/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="https://huongnhdh.github.io/blog/extra/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://huongnhdh.github.io/blog/extra/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="https://huongnhdh.github.io/blog/extra/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://huongnhdh.github.io/blog/extra/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="https://huongnhdh.github.io/blog/extra/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://huongnhdh.github.io/blog/extra/favicon-16x16.png">
+  <link rel="manifest" href="https://huongnhdh.github.io/blog/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://huongnhdh.github.io/blog/theme/css/main.css" />
+</head>
+
+<body id="index" class="home" data-no-instant>
+  <div class="container">
+<a href="https://github.com/huongnhdh/">
+<img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub" />
+</a>
+<section class="banner-section">
+  <div class='msg'>
+    <h1><a href="https://huongnhdh.github.io/blog">Huongnhd's journey </a></h1>
+    <p>Go Slow…To Go Fast!</p>
+  </div>
+  <p class="banner">Greatness Awaits</p>
+</section>
+<header id="banner" class="body">
+    <ul id="ul-nav-top">
+      <li><a href="https://huongnhdh.github.io/blog" class=" nav-item" >Home</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/archives" class=" nav-item">Archives</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/tags" class=" nav-item">Tags</a></li>
+      <li><a href="https://huongnhdh.github.io/blog/authors" class=" nav-item">Authors</a></li>
+    </ul>
+  <nav>
+    <ul class="columns">
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/architecture">Architecture</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/security">Security</a></li>
+        <li class="column  " ><a href="https://huongnhdh.github.io/blog/category/tools">Tools</a></li>
+        <li class="column  active  " ><a href="https://huongnhdh.github.io/blog/category/workflow">Workflow</a></li>
+    </ul>
+  </nav>
+</header><!-- /#banner -->  <section id="content" class="body">
+  <article>
+      <header>          
+        <h3 class="entry-title">
+          <a href="https://huongnhdh.github.io/blog/git-help-everyday" rel="bookmark"
+            title="Permalink to git help everyday">git help everyday
+          </a>
+           
+        </h3>     
+<div class="article-info">
+  <abbr  title="2018-12-06T21:20:00+07:00">
+          <i class="far fa-calendar-alt"></i> 
+          2018-12-06
+  </abbr>
+    <div class="tags">
+        <a  href="https://huongnhdh.github.io/blog/tag/git"><span class="tag">#git </span> </a>
+    </div>
+</div>        <div class="fb-like" data-href="https://huongnhdh.github.io/blog/git-help-everyday" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+      </header>
+       
+      <div class="entry-content">
+        <div> 
+
+        </div>
+        <div class="blog-content">
+          <h2><strong>NAME(Tên)</strong></h2>
+<div class="highlight"><pre><span></span><span class="n">giteveryday</span> <span class="o">-</span> <span class="n">M</span><span class="err">ộ</span><span class="n">t</span> <span class="n">b</span><span class="err">ộ</span> <span class="n">l</span><span class="err">ệ</span><span class="n">nh</span> <span class="n">t</span><span class="err">ố</span><span class="n">i</span> <span class="n">thi</span><span class="err">ể</span><span class="n">u</span> <span class="n">h</span><span class="err">ữ</span><span class="n">u</span> <span class="err">í</span><span class="n">ch</span> <span class="n">cho</span> <span class="ss">`Git`</span>
+</pre></div>
+
+
+<h2><strong>SYNOPSIS(Tóm tắt)</strong></h2>
+<div class="highlight"><pre><span></span><span class="err">Everyday Git với 20 lệnh hoặc hơn</span>
+</pre></div>
+
+
+<h2><strong>DESCRIPTION(Mô tả)</strong></h2>
+<p>Người dùng Git có thể được phân nhóm thành bốn loại với mục đích mô tả ở dưới dây, bên cạnh đấy là một tập lệnh git cực kỳ hữu ích được sử dụng hàng ngày.</p>
+<p>·   <code>INDIVIDUAL DEVELOPER (STANDALONE)</code>: Những commands cơ bản cho nhà phát triển độc lập là  nhất cho những ai muốn commit, ngay cả khi  làm việc một mình.</p>
+<p>·   <code>INDIVIDUAL DEVELOPER (PARTICIPANT)</code>: Nếu bạn làm việc với những người khác, bạn sẽ cần những commands được liệt kê trong phần trên (những participant)</p>
+<p>·   <code>INTEGRATOR</code>: Những người đóng vai trò Integrator cần học thêm một số lệnh ngoài những điều trên.</p>
+<p>·   <code>REPOSITORY ADMINISTRATION</code>: Những commands dành cho quản trị viên (system administrators), những người chịu trách nhiệm cho việc quản trị những kho lưu trữ Git.</p>
+<h2>1. <code>INDIVIDUAL DEVELOPER (STANDALONE)</code></h2>
+<p>Một developer cá nhân độc lập thì không phải trao đổi  patches với những người khác,  làm việc một mình với một kho lưu trữ, Họ thường sử dụng những commands sau:</p>
+<p>·   <code>git-init(1)</code> để tạo mới một  kho lưu trữ</p>
+<p>·   <code>git-log(1)</code> để xem lịch sử những thay đổi trong kho lưu trữ</p>
+<p>·   <code>git-checkout(1) and git-branch(1)</code>để chuyển qua các nhánh khác nhau.</p>
+<p>·   <code>git-add(1)</code> để quản lý các index file</p>
+<p>·   <code>git-diff(1)</code> và <code>git-status(1)</code> để xem những gì bận đang làm</p>
+<p>·   <code>git-commit(1)</code> để  lưu những thay đổi vào  nhánh hiện tại.</p>
+<p>·   <code>git-reset(1)</code> và <code>git-checkout(1)</code> (with pathname parameters) để hủy bỏ những thay đổi.</p>
+<p>·   <code>git-merge(1)</code> để tích hợp thay đổi của các nhánh local</p>
+<p>·   <code>git-rebase(1)</code> kết quả giống như git-merge(1) nhưng làm với cơ chế khác. có thể tìm hiểu thêm tại đây <a href="https://git-scm.com/book/vi/v1/Ph%C3%A2n-Nh%C3%A1nh-Trong-Git-Rebasing">git-rebase</a></p>
+<p>·   <code>git-tag(1)</code> để tag một điểm đặc biết (vd realease)</p>
+<h4>Examples (Ví dụ)</h4>
+<p>Dùng 1 file nén tarball như là một điểm bắt đầu khi tạo  một kho lưu trữ mới</p>
+<div class="highlight"><pre><span></span>    $ tar zxf frotz.tar.gz
+    $ <span class="nb">cd</span> frotz
+    $ git init
+    $ git add . <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+    $ git commit -m <span class="s2">&quot;import frotz vào source tree.&quot;</span>
+    $ git tag v2.43 <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+
+<span class="c1"># 1. Thêm vào tất cả mọi thứ dưới thư mục hiện tại.</span>
+<span class="c1"># 2. Đánh dấu một tag để quản lý dễ dàng.</span>
+</pre></div>
+
+
+<p>Tạo 1 nhánh topic/feature và nhánh develop.</p>
+<div class="highlight"><pre><span></span>$ git checkout -b alsa-audio <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+$ edit/compile/test
+$ git checkout -- curses/ux_audio_oss.c <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+$ git add curses/ux_audio_alsa.c <span class="o">(</span><span class="m">3</span><span class="o">)</span>
+$ edit/compile/test
+$ git diff HEAD <span class="o">(</span><span class="m">4</span><span class="o">)</span>
+$ git commit -a -s <span class="o">(</span><span class="m">5</span><span class="o">)</span>
+$ edit/compile/test
+$ git diff HEAD^ <span class="o">(</span><span class="m">6</span><span class="o">)</span>
+$ git commit -a --amend <span class="o">(</span><span class="m">7</span><span class="o">)</span>
+$ git checkout master <span class="o">(</span><span class="m">8</span><span class="o">)</span>
+$ git merge alsa-audio <span class="o">(</span><span class="m">9</span><span class="o">)</span>
+$ git log --since<span class="o">=</span><span class="s1">&#39;3 days ago&#39;</span> <span class="o">(</span><span class="m">10</span><span class="o">)</span>
+$ git log v2.43.. curses/ <span class="o">(</span><span class="m">11</span><span class="o">)</span>
+
+<span class="c1"># 1. Tạo mới một topic branch.</span>
+<span class="c1"># 2. Loại bỏ tất cả thay đổi trên file curses/ux_audio_oss.c.</span>
+<span class="c1"># 3. Nếu thêm vào một file mới; bạn có thể lọai bỏ và sửa đổ  khi thực hiện git commit -a sau đó.</span>
+<span class="c1"># 4. Để xem những gì thay đổi khi bạn commit.</span>
+<span class="c1"># 5. Viết tắt của (git commit --amend --squash ) commit mọi thứ, as you have # tested, with your sign-off.</span>
+<span class="c1"># 6. Xem tất cả thay đổi bao gồm cả các commit trước đó.</span>
+<span class="c1"># 7. sửa commit trước đó, thêm vào những thay đổi mới, sử dụng message gốc.</span>
+<span class="c1"># 8. chuyển qua master branch.</span>
+<span class="c1"># 9. tích hợp nhánh topic vào  nhánh master.</span>
+<span class="c1"># 10. xem lại lịch sử commit; các công thức để  giới hạn đầu ra có thể  # combined and include -10 (để  show ra 10 commits), --until=2005-12-10, vv.</span>
+<span class="c1"># 11. chỉ nhìn những thay đổi của thư mục curses, từ thời điểm tại v2.43 tag.</span>
+</pre></div>
+
+
+<h3>2. <code>INDIVIDUAL DEVELOPER (PARTICIPANT)</code></h3>
+<p>Một developer làm việc như một thành viên trong một nhóm dự án cần học cách làm sao để giao tiếp với các thành viên còn lại, và sử dụng những commands này  bên cạnh những command mà developer độc lập hay  dùng</p>
+<p>·   <code>git-clone(1)</code> tạo một bản sao của kho lưu trữ trên upstream về local của bạn.</p>
+<p>·   <code>git-pull(1)</code> and <code>git-fetch(1)</code> từ <strong>origin</strong>  để  giữ up-to-date với the upstream.</p>
+<p>·   <code>git-push(1)</code> làm kho lưu trữ được chia sẻ, khi áp dụng  flow kiểu CVS</p>
+<p>·   <code>git-format-patch(1)</code> để chuẩn bị đăng kí email, nếu bạn chấp nhận qui trình làm việu kiểu <code>Linux kernel-style forum workflow</code>.</p>
+<p>·   <code>git-send-email(1)</code> để gửi e-mail submission mà không corruption bằng MUA.</p>
+<p>·   <code>git-request-pull(1)</code> để  tạo một tóm tắt cho sự thay đổi từ upstream mà  bạn pull về</p>
+<h4>Examples (Ví dụ)</h4>
+<p>Clone the upstream and work on it. Feed changes to upstream.
+Tạo bản sao từ repo để làm việc trên đó. Và đưa những sự thay đổi lên upstream.</p>
+<div class="highlight"><pre><span></span>$ git clone git://git.kernel.org/pub/scm/.../torvalds/linux-2.6 my2.6
+$ <span class="nb">cd</span> my2.6
+$ git checkout -b mine master <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+$ edit/compile/test<span class="p">;</span> git commit -a -s <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+$ git format-patch master <span class="o">(</span><span class="m">3</span><span class="o">)</span>
+$ git send-email --to<span class="o">=</span><span class="s2">&quot;person &lt;email@example.com&gt;&quot;</span> <span class="m">00</span>*.patch <span class="o">(</span><span class="m">4</span><span class="o">)</span>
+$ git checkout master <span class="o">(</span><span class="m">5</span><span class="o">)</span>
+$ git pull <span class="o">(</span><span class="m">6</span><span class="o">)</span>
+$ git log -p ORIG_HEAD.. arch/i386 include/asm-i386 <span class="o">(</span><span class="m">7</span><span class="o">)</span>
+$ git ls-remote --heads http://git.kernel.org/.../jgarzik/libata-dev.git <span class="o">(</span><span class="m">8</span><span class="o">)</span>
+$ git pull git://git.kernel.org/pub/.../jgarzik/libata-dev.git ALL <span class="o">(</span><span class="m">9</span><span class="o">)</span>
+$ git reset --hard ORIG_HEAD <span class="o">(</span><span class="m">10</span><span class="o">)</span>
+$ git gc <span class="o">(</span><span class="m">11</span><span class="o">)</span>
+
+<span class="c1"># 1. checkout a new branch mine from master. Branch ở local tên là `mine` được trỏ tới branch master</span>
+<span class="c1"># 2. repeat as needed. lặp lại những gì cần thiết tại bước 1</span>
+<span class="c1"># 3. extract patches from your branch, relative to master, (Trích xuất những sửa đổi từ nhánh của bạn so với nhánh master),</span>
+<span class="c1"># 4. and email them.  (set author bằng email cho chúng)</span>
+<span class="c1"># 5. return to master, ready to see what’s new (Trở về nhánh master cũng như xem những gì mới cập nhật từ đồng đội)</span>
+<span class="c1"># 6. git pull fetches from origin by default and merges into the current branch. (lấy tất cả những thay đổi từ origin và tích hợp(merge) chúng vào nhánh master)</span>
+<span class="c1"># 7. immediately after pulling, look at the changes done upstream since last time we checked, only in the area we are interested in. (Ngay sau khi pull về, nhìn những thây đổi đã làm trên upstream kể từ thời gian cuối cùng chúng ta check, chỉ trong những khu vực chúng ta quan tâm )</span>
+<span class="c1"># 8. check the branch names in an external repository (if not known).(Kiểm tra một branch names trong một kho lưu trữ bên ngoài)</span>
+<span class="c1"># 9. fetch from a specific branch ALL from a specific repository and merge it. (Fetch all branch từ 1 kho lưu trữ chỉ định vaqf merge chúng)</span>
+<span class="c1"># 10. revert the pull. (undo thao tác pull)</span>
+<span class="c1"># 11. thu thập những đối tượng là rác còn lại sau quá trình `reverted pull`</span>
+</pre></div>
+
+
+<p>Đẩy lên vào một repository khác.</p>
+<div class="highlight"><pre><span></span>satellite$ git clone mothership:frotz frotz <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+satellite$ <span class="nb">cd</span> frotz
+satellite$ git config --get-regexp <span class="s1">&#39;^(remote|branch)\.&#39;</span> <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+remote.origin.url mothership:frotz
+remote.origin.fetch refs/heads/*:refs/remotes/origin/*
+branch.master.remote origin
+branch.master.merge refs/heads/master
+satellite$ git config remote.origin.push <span class="se">\</span>
+            +refs/heads/*:refs/remotes/satellite/* <span class="o">(</span><span class="m">3</span><span class="o">)</span>
+satellite$ edit/compile/test/commit
+satellite$ git push origin <span class="o">(</span><span class="m">4</span><span class="o">)</span>
+
+mothership$ <span class="nb">cd</span> frotz
+mothership$ git checkout master
+mothership$ git merge satellite/master <span class="o">(</span><span class="m">5</span><span class="o">)</span>
+
+<span class="c1"># 1. mothership machine có kho lưu trữ tên là  `frotz`; copy kho lưu trữ này về để làm việc với satellite machine.</span>
+<span class="c1"># 2. copy nguyên một bộ biến config mặc định. Nó sắp xếp Git pull để fetch và lưu trữ các nhánh của  mothership machine đến local remotes/origin/* remote-tracking nhánh.</span>
+<span class="c1"># 3. arrange git push to push all local branches to their corresponding branch of the mothership machine. Sắp xếp việc git push từ nhánh local đến nhánh remote tương ứng</span>
+<span class="c1"># 4. push will stash all our work away on remotes/satellite/* remote-tracking branches on the mothership machine. You could use this as a back-up method. Likewise, you can pretend that mothership &quot;fetched&quot; from you (useful when access is one sided). Hành động __push__ sẽ stash tất cả công việc của the mothership machine lên nhánh remotes/satellite/* remote-tracking. Đây là một cách dùng đê backup. Tương tự thếm bạn cần giả  lập rằng. mothership lấy từ bạn (Và điều này sẽ hữu ích khi việc truy cập là từ một phía)</span>
+<span class="c1"># 5. on mothership machine, merge the work done on the satellite machine into the master branch. Trên branch mothership machine, tích hợp những công việc đã hoàn thành trên `satellite machine` lên trên branch master.</span>
+</pre></div>
+
+
+<p>Branch off of a specific tag.
+Kết thúc nhánh với một tah cụ thể</p>
+<div class="highlight"><pre><span></span>$ git checkout -b private2.6.14 v2.6.14 <span class="o">(</span><span class="m">1</span><span class="o">)</span>
+$ edit/compile/test<span class="p">;</span> git commit -a
+$ git checkout master
+$ git cherry-pick v2.6.14..private2.6.14 <span class="o">(</span><span class="m">2</span><span class="o">)</span>
+
+<span class="c1"># 1. create a private branch based on a well known (but somewhat behind) tag. Tạo một nhánh riêng từ tên tag đã biết.</span>
+
+<span class="c1"># 2. chuyển tất cả những thay đổi trong  private2.6.14 branch đến master branch mà không phải thông qua format &quot;merging&quot; nào. Hoặc làm bằng tay.</span>
+
+<span class="c1"># git format-patch -k -m --stdout v2.6.14..private2.6.14 | git am -3 -k</span>
+
+<span class="c1"># An alternate participant submission mechanism is using the git request-pull or pull-request mechanisms (e.g as used on GitHub (www.github.com) to notify your upstream of your contribution. Một cơ chế cho viêc cập nhật các participant là sử dụng cơ chế git request-pull, hoặc pull-request để thông báo việc contribuition của bạn lên upstream.</span>
+</pre></div>
+
+
+<p>__Tuần sau chúng ta sẽ tiếp tục với part 2 nhé ^^_</p>
+<h2>3. <code>INTEGRATOR</code></h2>
+<p>A fairly central person acting as the integrator in a group project receives changes made by others, reviews and integrates them and publishes the result for others to use, using these commands
+in addition to the ones needed by participants.</p>
+<p>This section can also be used by those who respond to git request-pull or pull-request on GitHub (www.github.com) to integrate the work of others into their history. A sub-area lieutenant for a
+repository will act both as a participant and as an integrator.</p>
+<p>·   <code>git-am(1)</code> to apply patches e-mailed in from your contributors.</p>
+<p>·   <code>git-pull(1)</code> to merge from your trusted lieutenants.</p>
+<p>·   <code>git-format-patch(1)</code> to prepare and send suggested alternative to contributors.</p>
+<p>·   <code>git-revert(1)</code> to undo botched commits.</p>
+<p>·   <code>git-push(1)</code> to publish the bleeding edge.</p>
+<p>Examples
+       A typical integrator’s Git day.</p>
+<div class="highlight"><pre><span></span>           <span class="err">$</span> <span class="n">git</span> <span class="n">status</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">branch</span> <span class="c1">--no-merged master (2)</span>
+           <span class="err">$</span> <span class="n">mailx</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+           <span class="o">&amp;</span> <span class="n">s</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">5</span> <span class="p">.</span><span class="o">/+</span><span class="k">to</span><span class="o">-</span><span class="n">apply</span>
+           <span class="o">&amp;</span> <span class="n">s</span> <span class="mi">7</span> <span class="mi">8</span> <span class="p">.</span><span class="o">/+</span><span class="k">hold</span><span class="o">-</span><span class="n">linus</span>
+           <span class="o">&amp;</span> <span class="n">q</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">topic</span><span class="o">/</span><span class="n">one</span> <span class="n">master</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">am</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">s</span> <span class="p">.</span><span class="o">/+</span><span class="k">to</span><span class="o">-</span><span class="n">apply</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">compile</span><span class="o">/</span><span class="n">test</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="k">hold</span><span class="o">/</span><span class="n">linus</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">am</span> <span class="o">-</span><span class="mi">3</span> <span class="o">-</span><span class="n">i</span> <span class="o">-</span><span class="n">s</span> <span class="p">.</span><span class="o">/+</span><span class="k">hold</span><span class="o">-</span><span class="n">linus</span> <span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">topic</span><span class="o">/</span><span class="n">one</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">rebase</span> <span class="n">master</span> <span class="p">(</span><span class="mi">6</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">pu</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="k">reset</span> <span class="c1">--hard next (7)</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">merge</span> <span class="n">topic</span><span class="o">/</span><span class="n">one</span> <span class="n">topic</span><span class="o">/</span><span class="n">two</span> <span class="o">&amp;&amp;</span> <span class="n">git</span> <span class="n">merge</span> <span class="k">hold</span><span class="o">/</span><span class="n">linus</span> <span class="p">(</span><span class="mi">8</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">checkout</span> <span class="n">maint</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">cherry</span><span class="o">-</span><span class="n">pick</span> <span class="n">master</span><span class="o">~</span><span class="mi">4</span> <span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">compile</span><span class="o">/</span><span class="n">test</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">tag</span> <span class="o">-</span><span class="n">s</span> <span class="o">-</span><span class="n">m</span> <span class="ss">&quot;GIT 0.99.9x&quot;</span> <span class="n">v0</span><span class="p">.</span><span class="mi">99</span><span class="p">.</span><span class="mi">9</span><span class="n">x</span> <span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="k">fetch</span> <span class="n">ko</span> <span class="o">&amp;&amp;</span> <span class="k">for</span> <span class="n">branch</span> <span class="k">in</span> <span class="n">master</span> <span class="n">maint</span> <span class="k">next</span> <span class="n">pu</span> <span class="p">(</span><span class="mi">11</span><span class="p">)</span>
+               <span class="k">do</span>
+                   <span class="n">git</span> <span class="k">show</span><span class="o">-</span><span class="n">branch</span> <span class="n">ko</span><span class="o">/</span><span class="err">$</span><span class="n">branch</span> <span class="err">$</span><span class="n">branch</span> <span class="p">(</span><span class="mi">12</span><span class="p">)</span>
+               <span class="n">done</span>
+           <span class="err">$</span> <span class="n">git</span> <span class="n">push</span> <span class="c1">--follow-tags ko (13)</span>
+
+       <span class="mi">1</span><span class="p">.</span> <span class="n">see</span> <span class="n">what</span> <span class="n">you</span> <span class="n">were</span> <span class="k">in</span> <span class="n">the</span> <span class="n">middle</span> <span class="k">of</span> <span class="n">doing</span><span class="p">,</span> <span class="k">if</span> <span class="n">anything</span><span class="p">.</span>
+       <span class="mi">2</span><span class="p">.</span> <span class="n">see</span> <span class="n">which</span> <span class="n">branches</span> <span class="n">haven</span><span class="err">’</span><span class="n">t</span> <span class="n">been</span> <span class="n">merged</span> <span class="k">into</span> <span class="n">master</span> <span class="n">yet</span><span class="p">.</span> <span class="n">Likewise</span> <span class="k">for</span> <span class="k">any</span> <span class="n">other</span> <span class="n">integration</span> <span class="n">branches</span> <span class="n">e</span><span class="p">.</span><span class="k">g</span><span class="p">.</span>  <span class="n">maint</span><span class="p">,</span> <span class="k">next</span> <span class="k">and</span> <span class="n">pu</span> <span class="p">(</span><span class="n">potential</span> <span class="n">updates</span><span class="p">).</span>
+       <span class="mi">3</span><span class="p">.</span> <span class="k">read</span> <span class="n">mails</span><span class="p">,</span> <span class="n">save</span> <span class="n">ones</span> <span class="n">that</span> <span class="k">are</span> <span class="n">applicable</span><span class="p">,</span> <span class="k">and</span> <span class="n">save</span> <span class="n">others</span> <span class="n">that</span> <span class="k">are</span> <span class="k">not</span> <span class="n">quite</span> <span class="n">ready</span> <span class="p">(</span><span class="n">other</span> <span class="n">mail</span> <span class="n">readers</span> <span class="k">are</span> <span class="n">available</span><span class="p">).</span>
+       <span class="mi">4</span><span class="p">.</span> <span class="n">apply</span> <span class="n">them</span><span class="p">,</span> <span class="n">interactively</span><span class="p">,</span> <span class="k">with</span> <span class="n">your</span> <span class="n">sign</span><span class="o">-</span><span class="n">offs</span><span class="p">.</span>
+       <span class="mi">5</span><span class="p">.</span> <span class="k">create</span> <span class="n">topic</span> <span class="n">branch</span> <span class="k">as</span> <span class="n">needed</span> <span class="k">and</span> <span class="n">apply</span><span class="p">,</span> <span class="n">again</span> <span class="k">with</span> <span class="n">sign</span><span class="o">-</span><span class="n">offs</span><span class="p">.</span>
+       <span class="mi">6</span><span class="p">.</span> <span class="n">rebase</span> <span class="n">internal</span> <span class="n">topic</span> <span class="n">branch</span> <span class="n">that</span> <span class="n">has</span> <span class="k">not</span> <span class="n">been</span> <span class="n">merged</span> <span class="k">to</span> <span class="n">the</span> <span class="n">master</span> <span class="k">or</span> <span class="n">exposed</span> <span class="k">as</span> <span class="n">a</span> <span class="n">part</span> <span class="k">of</span> <span class="n">a</span> <span class="k">stable</span> <span class="n">branch</span><span class="p">.</span>
+       <span class="mi">7</span><span class="p">.</span> <span class="k">restart</span> <span class="n">pu</span> <span class="k">every</span> <span class="n">time</span> <span class="k">from</span> <span class="n">the</span> <span class="k">next</span><span class="p">.</span>
+       <span class="mi">8</span><span class="p">.</span> <span class="k">and</span> <span class="n">bundle</span> <span class="n">topic</span> <span class="n">branches</span> <span class="n">still</span> <span class="n">cooking</span><span class="p">.</span>
+       <span class="mi">9</span><span class="p">.</span> <span class="n">backport</span> <span class="n">a</span> <span class="n">critical</span> <span class="n">fix</span><span class="p">.</span>
+       <span class="mi">10</span><span class="p">.</span> <span class="k">create</span> <span class="n">a</span> <span class="n">signed</span> <span class="n">tag</span><span class="p">.</span>
+       <span class="mi">11</span><span class="p">.</span> <span class="n">make</span> <span class="n">sure</span> <span class="n">master</span> <span class="n">was</span> <span class="k">not</span> <span class="n">accidentally</span> <span class="n">rewound</span> <span class="n">beyond</span> <span class="n">that</span> <span class="n">already</span> <span class="n">pushed</span> <span class="k">out</span><span class="p">.</span>
+       <span class="mi">12</span><span class="p">.</span> <span class="k">In</span> <span class="n">the</span> <span class="k">output</span> <span class="k">from</span> <span class="n">git</span> <span class="k">show</span><span class="o">-</span><span class="n">branch</span><span class="p">,</span> <span class="n">master</span> <span class="n">should</span> <span class="n">have</span> <span class="n">everything</span> <span class="n">ko</span><span class="o">/</span><span class="n">master</span> <span class="n">has</span><span class="p">,</span> <span class="k">and</span> <span class="k">next</span> <span class="n">should</span> <span class="n">have</span> <span class="n">everything</span> <span class="n">ko</span><span class="o">/</span><span class="k">next</span> <span class="n">has</span><span class="p">,</span> <span class="n">etc</span><span class="p">.</span>
+       <span class="mi">13</span><span class="p">.</span> <span class="n">push</span> <span class="k">out</span> <span class="n">the</span> <span class="n">bleeding</span> <span class="n">edge</span><span class="p">,</span> <span class="n">together</span> <span class="k">with</span> <span class="k">new</span> <span class="n">tags</span> <span class="n">that</span> <span class="n">point</span> <span class="k">into</span> <span class="n">the</span> <span class="n">pushed</span> <span class="n">history</span><span class="p">.</span>
+
+   <span class="k">In</span> <span class="n">this</span> <span class="n">example</span><span class="p">,</span> <span class="n">the</span> <span class="n">ko</span> <span class="n">shorthand</span> <span class="n">points</span> <span class="k">at</span> <span class="n">the</span> <span class="n">Git</span> <span class="n">maintainer</span><span class="err">’</span><span class="n">s</span> <span class="n">repository</span> <span class="k">at</span> <span class="n">kernel</span><span class="p">.</span><span class="n">org</span><span class="p">,</span> <span class="k">and</span> <span class="n">looks</span> <span class="k">like</span> <span class="n">this</span><span class="p">:</span>
+
+       <span class="p">(</span><span class="k">in</span> <span class="p">.</span><span class="n">git</span><span class="o">/</span><span class="n">config</span><span class="p">)</span>
+       <span class="p">[</span><span class="n">remote</span> <span class="ss">&quot;ko&quot;</span><span class="p">]</span>
+               <span class="n">url</span> <span class="o">=</span> <span class="n">kernel</span><span class="p">.</span><span class="n">org</span><span class="p">:</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">scm</span><span class="o">/</span><span class="n">git</span><span class="o">/</span><span class="n">git</span><span class="p">.</span><span class="n">git</span>
+               <span class="k">fetch</span> <span class="o">=</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="cm">/*:refs/remotes/ko/*</span>
+<span class="cm">               push = refs/heads/master</span>
+<span class="cm">               push = refs/heads/next</span>
+<span class="cm">               push = +refs/heads/pu</span>
+<span class="cm">               push = refs/heads/maint</span>
+</pre></div>
+
+
+<h2>4. <code>REPOSITORY ADMINISTRATION</code></h2>
+<p>A repository administrator uses the following tools to set up and maintain access to the repository by developers.</p>
+<p>·   git-daemon(1) to allow anonymous download from repository.</p>
+<p>·   git-shell(1) can be used as a restricted login shell for shared central repository users.</p>
+<p>·   git-http-backend(1) provides a server side implementation of Git-over-HTTP ("Smart http") allowing both fetch and push services.</p>
+<p>·   gitweb(1) provides a web front-end to Git repositories, which can be set-up using the git-instaweb(1) script.</p>
+<p>update hook howto[1] has a good example of managing a shared central repository.</p>
+<p>In addition there are a number of other widely deployed hosting, browsing and reviewing solutions such as:</p>
+<p>·   gitolite, gerrit code review, cgit and others.</p>
+<p>Examples
+We assume the following in /etc/services</p>
+<div class="highlight"><pre><span></span><span class="err">    $ grep 9418 /etc/services</span>
+<span class="err">    git             9418/tcp                # Git Version Control System</span>
+</pre></div>
+
+
+<p>Run git-daemon to serve /pub/scm from inetd.</p>
+<div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">grep</span> <span class="n">git</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">inetd</span><span class="p">.</span><span class="n">conf</span>
+    <span class="n">git</span>     <span class="n">stream</span>  <span class="n">tcp</span>     <span class="n">nowait</span>  <span class="n">nobody</span> <span class="err">\</span>
+        <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">daemon</span> <span class="n">git</span><span class="o">-</span><span class="n">daemon</span> <span class="c1">--inetd --export-all /pub/scm</span>
+
+<span class="n">The</span> <span class="n">actual</span> <span class="n">configuration</span> <span class="n">line</span> <span class="n">should</span> <span class="n">be</span> <span class="k">on</span> <span class="n">one</span> <span class="n">line</span><span class="p">.</span>
+</pre></div>
+
+
+<p>Run git-daemon to serve /pub/scm from xinetd.</p>
+<div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">cat</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">xinetd</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">daemon</span>
+    <span class="o">#</span> <span class="k">default</span><span class="p">:</span> <span class="k">off</span>
+    <span class="o">#</span> <span class="n">description</span><span class="p">:</span> <span class="n">The</span> <span class="n">Git</span> <span class="n">server</span> <span class="n">offers</span> <span class="k">access</span> <span class="k">to</span> <span class="n">Git</span> <span class="n">repositories</span>
+    <span class="n">service</span> <span class="n">git</span>
+    <span class="err">{</span>
+            <span class="n">disable</span> <span class="o">=</span> <span class="k">no</span>
+            <span class="k">type</span>            <span class="o">=</span> <span class="n">UNLISTED</span>
+            <span class="n">port</span>            <span class="o">=</span> <span class="mi">9418</span>
+            <span class="n">socket_type</span>     <span class="o">=</span> <span class="n">stream</span>
+            <span class="n">wait</span>            <span class="o">=</span> <span class="k">no</span>
+            <span class="k">user</span>            <span class="o">=</span> <span class="n">nobody</span>
+            <span class="n">server</span>          <span class="o">=</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">daemon</span>
+            <span class="n">server_args</span>     <span class="o">=</span> <span class="c1">--inetd --export-all --base-path=/pub/scm</span>
+            <span class="n">log_on_failure</span>  <span class="o">+=</span> <span class="n">USERID</span>
+    <span class="err">}</span>
+
+<span class="k">Check</span> <span class="n">your</span> <span class="n">xinetd</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span> <span class="n">documentation</span> <span class="k">and</span> <span class="n">setup</span><span class="p">,</span> <span class="n">this</span> <span class="k">is</span> <span class="k">from</span> <span class="n">a</span> <span class="n">Fedora</span> <span class="k">system</span><span class="p">.</span> <span class="n">Others</span> <span class="n">might</span> <span class="n">be</span> <span class="n">different</span><span class="p">.</span>
+</pre></div>
+
+
+<p>Give push/pull only access to developers using git-over-ssh.
+    e.g. those using: $ git push/pull ssh://host.xz/pub/scm/project</p>
+<div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">grep</span> <span class="n">git</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">passwd</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">alice</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1000</span><span class="p">:</span><span class="mi">1000</span><span class="p">::</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">alice</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span>
+    <span class="n">bob</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1001</span><span class="p">:</span><span class="mi">1001</span><span class="p">::</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">bob</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span>
+    <span class="n">cindy</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1002</span><span class="p">:</span><span class="mi">1002</span><span class="p">::</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">cindy</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span>
+    <span class="n">david</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">1003</span><span class="p">:</span><span class="mi">1003</span><span class="p">::</span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">david</span><span class="p">:</span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span>
+    <span class="err">$</span> <span class="n">grep</span> <span class="n">git</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">shells</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+    <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span>
+
+<span class="mi">1</span><span class="p">.</span> <span class="n">log</span><span class="o">-</span><span class="k">in</span> <span class="n">shell</span> <span class="k">is</span> <span class="k">set</span> <span class="k">to</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="n">git</span><span class="o">-</span><span class="n">shell</span><span class="p">,</span> <span class="n">which</span> <span class="n">does</span> <span class="k">not</span> <span class="n">allow</span> <span class="n">anything</span> <span class="n">but</span> <span class="n">git</span> <span class="n">push</span> <span class="k">and</span> <span class="n">git</span> <span class="n">pull</span><span class="p">.</span> <span class="n">The</span> <span class="n">users</span> <span class="n">require</span> <span class="n">ssh</span> <span class="k">access</span> <span class="k">to</span> <span class="n">the</span> <span class="n">machine</span><span class="p">.</span>
+<span class="mi">2</span><span class="p">.</span> <span class="k">in</span> <span class="n">many</span> <span class="n">distributions</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">shells</span> <span class="n">needs</span> <span class="k">to</span> <span class="n">list</span> <span class="n">what</span> <span class="k">is</span> <span class="n">used</span> <span class="k">as</span> <span class="n">the</span> <span class="n">login</span> <span class="n">shell</span><span class="p">.</span>
+</pre></div>
+
+
+<p>CVS-style shared repository.</p>
+<div class="highlight"><pre><span></span>    <span class="err">$</span> <span class="n">grep</span> <span class="n">git</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="k">group</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">git</span><span class="p">:</span><span class="n">x</span><span class="p">:</span><span class="mi">9418</span><span class="p">:</span><span class="n">alice</span><span class="p">,</span><span class="n">bob</span><span class="p">,</span><span class="n">cindy</span><span class="p">,</span><span class="n">david</span>
+    <span class="err">$</span> <span class="n">cd</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">devo</span><span class="p">.</span><span class="n">git</span>
+    <span class="err">$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="n">lrwxrwxrwx</span>   <span class="mi">1</span> <span class="n">david</span> <span class="n">git</span>    <span class="mi">17</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="n">HEAD</span> <span class="o">-&gt;</span> <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>
+        <span class="n">drwxrwsr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">2</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">4096</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="n">branches</span>
+        <span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="c1">--   1 david git    84 Dec  4 22:40 config</span>
+        <span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="c1">--   1 david git    58 Dec  4 22:40 description</span>
+        <span class="n">drwxrwsr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">2</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">4096</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="n">hooks</span>
+        <span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">rw</span><span class="o">-</span><span class="n">r</span><span class="c1">--   1 david git 37504 Dec  4 22:40 index</span>
+        <span class="n">drwxrwsr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">2</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">4096</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="n">info</span>
+        <span class="n">drwxrwsr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">4</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">4096</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="n">objects</span>
+        <span class="n">drwxrwsr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">4</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">4096</span> <span class="n">Nov</span>  <span class="mi">7</span> <span class="mi">14</span><span class="p">:</span><span class="mi">58</span> <span class="n">refs</span>
+        <span class="n">drwxrwsr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">2</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">4096</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="n">remotes</span>
+    <span class="err">$</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">hooks</span><span class="o">/</span><span class="k">update</span> <span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+        <span class="o">-</span><span class="n">r</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">xr</span><span class="o">-</span><span class="n">x</span>   <span class="mi">1</span> <span class="n">david</span> <span class="n">git</span>  <span class="mi">3536</span> <span class="nb">Dec</span>  <span class="mi">4</span> <span class="mi">22</span><span class="p">:</span><span class="mi">40</span> <span class="k">update</span>
+    <span class="err">$</span> <span class="n">cat</span> <span class="n">info</span><span class="o">/</span><span class="n">allowed</span><span class="o">-</span><span class="n">users</span> <span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+    <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span>       <span class="n">alice</span><span class="err">\</span><span class="o">|</span><span class="n">cindy</span>
+    <span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">doc</span><span class="o">-</span><span class="k">update</span>   <span class="n">bob</span>
+    <span class="n">refs</span><span class="o">/</span><span class="n">tags</span><span class="o">/</span><span class="n">v</span><span class="p">[</span><span class="mi">0</span><span class="o">-</span><span class="mi">9</span><span class="p">]</span><span class="o">*</span>       <span class="n">david</span>
+
+<span class="mi">1</span><span class="p">.</span> <span class="n">place</span> <span class="n">the</span> <span class="n">developers</span> <span class="k">into</span> <span class="n">the</span> <span class="n">same</span> <span class="n">git</span> <span class="k">group</span><span class="p">.</span>
+<span class="mi">2</span><span class="p">.</span> <span class="k">and</span> <span class="n">make</span> <span class="n">the</span> <span class="n">shared</span> <span class="n">repository</span> <span class="n">writable</span> <span class="k">by</span> <span class="n">the</span> <span class="k">group</span><span class="p">.</span>
+<span class="mi">3</span><span class="p">.</span> <span class="n">use</span> <span class="k">update</span><span class="o">-</span><span class="n">hook</span> <span class="n">example</span> <span class="k">by</span> <span class="n">Carl</span> <span class="k">from</span> <span class="n">Documentation</span><span class="o">/</span><span class="n">howto</span><span class="o">/</span> <span class="k">for</span> <span class="n">branch</span> <span class="n">policy</span> <span class="n">control</span><span class="p">.</span>
+<span class="mi">4</span><span class="p">.</span> <span class="n">alice</span> <span class="k">and</span> <span class="n">cindy</span> <span class="n">can</span> <span class="n">push</span> <span class="k">into</span> <span class="n">master</span><span class="p">,</span> <span class="k">only</span> <span class="n">bob</span> <span class="n">can</span> <span class="n">push</span> <span class="k">into</span> <span class="n">doc</span><span class="o">-</span><span class="k">update</span><span class="p">.</span> <span class="n">david</span> <span class="k">is</span> <span class="n">the</span> <span class="n">release</span> <span class="n">manager</span> <span class="k">and</span> <span class="k">is</span> <span class="n">the</span> <span class="k">only</span> <span class="n">person</span> <span class="n">who</span> <span class="n">can</span> <span class="k">create</span> <span class="k">and</span> <span class="n">push</span> <span class="k">version</span> <span class="n">tags</span><span class="p">.</span>
+</pre></div>
+
+
+<h2>GIT</h2>
+<div class="highlight"><pre><span></span><span class="err">   Part of the git(1) suite</span>
+</pre></div>
+
+
+<h2>NOTES</h2>
+<p>...</p>
+<div class="highlight"><pre><span></span><span class="err">_Git 2.19.1   10/05/2018  GITEVERYDAY(7)_</span>
+</pre></div>
+        </div>
+      </div><!-- /.entry-content -->
+        <div id="fb-root"></div>
+          <h2>Comments !</h2>
+          <div data-no-instant class="fb-like" data-href="https://huongnhdh.github.io/blog/git-help-everyday" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+          <div data-no-instant class="fb-comments" data-href="https://huongnhdh.github.io/blog/git-help-everyday" data-width="" data-numposts="5"></div>
+        </div>
+        <!-- <script async defer data-no-instant crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v3.3&appId=362195391033166&autoLogAppEvents=1"></script>
+        <script data-no-instant>
+          /* Google Analytics code here, without ga('send', 'pageview') */          
+          
+        </script> -->
+</article>  </section>
+    <section id="extras" class="body">
+      <div class="social">
+        <h2>social</h2>
+        <ul>
+          <li><a href="https://huongnhdh.github.io/blog/feeds/all.rss.xml"
+              type="application/rss+xml" rel="alternate">rss feed</a></li>
+
+          <li><a href="https://github.com/huongnhdh">github</a></li>
+        </ul>
+      </div><!-- /.social -->
+    </section><!-- /#extras -->
+
+    <footer id="contentinfo" class="body">
+      <address id="about" class="vcard body">
+        Copyright © 2018 by <a href="https://github.com/huongnhdh">HuongNHD</a>.
+        <p>The site was generate by <a href="https://github.com/getpelican/pelican">Pelican</a> with theme <a href="#"> notmyidea</a> modified, thanks!</p>
+        <div>Icons made by <a href="https://www.flaticon.com/authors/dave-gandy" title="Dave Gandy">Dave Gandy</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/"  title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+      </address><!-- /#about -->
+    </footer><!-- /#contentinfo -->
+  </div>
+    <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-131511951-1', 'auto');
+    ga('send', 'pageview');
+    </script>
+    <script data-no-instant src="https://huongnhdh.github.io/blog/theme/javascripts/init.js"></script>
+</body>
+</html>
